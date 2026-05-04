@@ -598,7 +598,6 @@ button {
 
 .contact-heading a {
   display: block;
-  word-break: break-all;
 }
 
 .contact-heading a:hover {
@@ -979,9 +978,6 @@ button {
     display: none;
   }
 
-  .contact-heading a {
-    max-width: 13ch;
-  }
 }
 
 
