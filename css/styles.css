@@ -1,0 +1,933 @@
+/*
+ * STYLES.CSS — johnvrhovnik.com rebuild
+ * Imports design system, defines global resets, layout,
+ * and every reusable component class.
+ *
+ * Structure:
+ *  1. Font face
+ *  2. Reset & base
+ *  3. Layout utilities
+ *  4. Grid system (12-column)
+ *  5. Navigation
+ *  6. Hero / display section
+ *  7. Project cards (home)
+ *  8. Section dividers
+ *  9. About section
+ * 10. Branding teaser (home)
+ * 11. Contact / CTA section
+ * 12. Footer
+ * 13. Case-study pages (shared styles)
+ * 14. Feed page (Etcetera)
+ * 15. Pete for America page
+ * 16. Buttons & links
+ * 17. Focus & accessibility
+ * 18. Animations
+ * 19. Responsive overrides
+ */
+
+@import './design-system.css';
+
+
+/* ============================================================
+   1. FONT FACE — Mabry Medium
+   Single weight file covering the full weight range so Mabry
+   is used for every element on the site, no fallback synthesis.
+   ============================================================ */
+@font-face {
+  font-family: 'Mabry';
+  src: url('../fonts/mabry-medium.woff2') format('woff2'),
+       url('../fonts/mabry-medium.woff')  format('woff'),
+       url('../fonts/mabry-medium.ttf')   format('truetype');
+  font-weight: 100 900; /* covers all weights — single file */
+  font-style:  normal;
+  font-display: swap;
+}
+
+
+/* ============================================================
+   2. RESET & BASE
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-family);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-base);
+  line-height: var(--line-height-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img, video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  padding: 0;
+}
+
+
+/* ============================================================
+   3. LAYOUT UTILITIES
+   ============================================================ */
+
+/* Constrained content container */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
+
+
+/* ============================================================
+   4. GRID SYSTEM — 12 columns
+   ============================================================ */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
+  gap: var(--grid-row-gap) var(--grid-gap);
+}
+
+.grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Default spans — apply at all sizes */
+.col-1  { grid-column: span 1; }
+.col-2  { grid-column: span 2; }
+.col-3  { grid-column: span 3; }
+.col-4  { grid-column: span 4; }
+.col-5  { grid-column: span 5; }
+.col-6  { grid-column: span 6; }
+.col-7  { grid-column: span 7; }
+.col-8  { grid-column: span 8; }
+.col-9  { grid-column: span 9; }
+.col-10 { grid-column: span 10; }
+.col-11 { grid-column: span 11; }
+.col-12 { grid-column: span 12; }
+
+/* Centered column utilities — sets both start and end lines */
+.col-10-center { grid-column: 2 / 12; }
+
+/* Desktop spans — ≥ 1024px */
+@media (min-width: 1024px) {
+  .col-lg-1  { grid-column: span 1; }
+  .col-lg-2  { grid-column: span 2; }
+  .col-lg-3  { grid-column: span 3; }
+  .col-lg-4  { grid-column: span 4; }
+  .col-lg-5  { grid-column: span 5; }
+  .col-lg-6  { grid-column: span 6; }
+  .col-lg-7  { grid-column: span 7; }
+  .col-lg-8  { grid-column: span 8; }
+  .col-lg-9  { grid-column: span 9; }
+  .col-lg-10 { grid-column: span 10; }
+  .col-lg-11 { grid-column: span 11; }
+  .col-lg-12 { grid-column: span 12; }
+
+  /* Centered/offset column utilities — sets both start and end lines */
+  .col-lg-10-center { grid-column: 2 / 12; }
+  .col-lg-9-right   { grid-column: 4 / 13; }
+}
+
+
+/* ============================================================
+   5. NAVIGATION
+   ============================================================ */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: var(--container-padding);
+  background-color: var(--color-background);
+  transition: transform var(--transition-base);
+}
+
+.nav.is-hidden {
+  transform: translateY(-100%);
+}
+
+.nav-logo {
+  font-size: 3rem;
+  font-weight: var(--font-weight-base);
+  letter-spacing: var(--letter-spacing-tight);
+  line-height: 1;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.nav-logo:hover {
+  color: var(--color-link);
+}
+
+/* Desktop nav links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+}
+
+.nav-link {
+  font-size: var(--font-size-nav);
+  font-weight: var(--font-weight-base);
+  letter-spacing: var(--letter-spacing-normal);
+  text-transform: uppercase;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.nav-link:hover,
+.nav-link.is-active {
+  color: var(--color-link);
+}
+
+/* Mobile hamburger toggle */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-text);
+  transition: transform var(--transition-base), opacity var(--transition-base);
+  transform-origin: center;
+}
+
+/* Hamburger → X animation */
+.nav-toggle.is-open span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.nav-toggle.is-open span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.is-open span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Mobile nav drawer */
+.nav-drawer {
+  display: none;
+  position: fixed;
+  top: var(--nav-height);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-background);
+  z-index: 99;
+  padding: var(--space-xl) var(--container-padding);
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: var(--space-lg);
+}
+
+.nav-drawer.is-open {
+  display: flex;
+}
+
+.nav-drawer .nav-link {
+  font-size: var(--font-size-display);
+  font-weight: var(--font-weight-base);
+  letter-spacing: var(--letter-spacing-tight);
+  line-height: var(--line-height-tight);
+}
+
+/* Offset page content below fixed nav */
+.page-body {
+  padding-top: var(--nav-height);
+}
+
+
+/* ============================================================
+   6. HERO / DISPLAY SECTION (Home page)
+   ============================================================ */
+.hero {
+  padding-top: calc(var(--space-3xl) * 2);
+  padding-bottom: calc(var(--space-3xl) * 2);
+}
+
+.hero-text {
+  font-size: var(--font-size-display);
+  font-weight: var(--font-weight-base);
+  line-height: var(--line-height-display);
+  letter-spacing: var(--letter-spacing-tight);
+  text-transform: uppercase;
+  max-width: 25ch; /* Matches screenshot line breaks */
+}
+
+/* Muted inline link — used in hero and contact heading */
+.display-link {
+  color: #4e4e4e;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.display-link:hover {
+  color: var(--color-link);
+  text-decoration: line-through;
+}
+
+
+/* ============================================================
+   7. PROJECT CARDS (Home page)
+   ============================================================ */
+
+.project-card {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  border-top: var(--border-rule);
+  padding-top: var(--space-sm);
+  padding-bottom: var(--space-5xl);
+}
+
+/* All hover effects scoped to content areas — image, label, meta.
+   Hovering the top/bottom padding gaps triggers nothing. */
+.project-card:has(.project-card__image-wrap:hover) .project-card__title,
+.project-card:has(.section-label:hover) .project-card__title,
+.project-card:has(.project-card__meta:hover) .project-card__title {
+  text-decoration-color: var(--color-text);
+}
+
+.project-card:has(.project-card__image-wrap:hover) .project-card__cta,
+.project-card:has(.section-label:hover) .project-card__cta,
+.project-card:has(.project-card__meta:hover) .project-card__cta {
+  color: var(--color-link);
+}
+
+.project-card__image-wrap {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: var(--space-md);
+  /* Fixed aspect ratio — matches screenshot proportions */
+  aspect-ratio: 16 / 9;
+}
+
+.project-card__image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+
+.project-card:has(.project-card__image-wrap:hover) .project-card__image-wrap img,
+.project-card:has(.project-card__meta:hover) .project-card__image-wrap img {
+  transform: scale(1.02);
+}
+
+.project-card__meta {
+  padding-inline: 0;
+}
+
+.project-card .section-label {
+  margin-bottom: var(--space-lg);
+}
+
+.project-card__title {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-base);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+  text-transform: uppercase;
+  color: var(--color-text);
+  margin-bottom: var(--space-md);
+  /* Thick underline — fades in on hover, works correctly across line breaks */
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 4px;
+  text-decoration-color: transparent;
+  transition: text-decoration-color var(--transition-base);
+}
+
+.project-card__description {
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-normal);
+  max-width: 52ch;
+  margin-bottom: var(--space-xl);
+}
+
+.project-card__cta {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-base);
+  letter-spacing: var(--letter-spacing-tight);
+  text-transform: uppercase;
+  transition: color var(--transition-fast);
+}
+
+
+/* ============================================================
+   8. SECTION DIVIDERS
+   ============================================================ */
+/* Section label — matches .project-card__label; write sentence case in HTML */
+.section-label {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-base);
+  letter-spacing: var(--letter-spacing-tight);
+  text-transform: uppercase;
+  color: var(--color-text);
+}
+
+
+/* ============================================================
+   9. ABOUT SECTION (Home page)
+   ============================================================ */
+.about-section__inner {
+  padding-block: var(--space-sm);
+  border-top: var(--border-rule);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+  align-items: center;
+  margin-top: var(--space-4xl);
+  margin-bottom: var(--space-4xl);
+}
+
+.about-body {
+  max-width: 88ch;
+}
+
+.about-body p {
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-snug);
+  margin-bottom: var(--space-md);
+}
+
+.about-body p:last-of-type {
+  margin-bottom: var(--space-lg);
+}
+
+.about-headline {
+  font-size: var(--font-size-largebody) !important;
+}
+
+.about-links {
+  display: flex;
+  gap: var(--space-xl);
+  margin-top: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.about-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: top center;
+}
+
+
+/* ============================================================
+  10. BRANDING TEASER (Home page — mini card linking to /branding)
+   ============================================================ */
+.branding-teaser__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4xl);
+  padding-block: var(--space-sm);
+  border-top: var(--border-rule);
+  margin-bottom: var(--space-4xl);
+}
+
+/* .branding-teaser__label replaced by .section-label in HTML */
+
+.branding-teaser__row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.branding-teaser__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.branding-teaser__title {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-base);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+  text-transform: uppercase;
+  margin-bottom: var(--space-lg);
+  transition: color var(--transition-fast);
+}
+
+.branding-teaser__image-wrap {
+  overflow: hidden;
+}
+
+.branding-teaser__image-wrap img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* ============================================================
+   10. CONTACT / CTA SECTION
+   ============================================================ */
+.contact-section__inner {
+  padding-block: var(--space-sm);
+  border-top: var(--border-rule);
+}
+
+.contact-heading {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-base);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+  text-transform: uppercase;
+  margin-top: var(--space-5xl);
+  margin-bottom: var(--space-5xl);
+}
+
+.contact-heading a {
+  display: block;
+  word-break: break-all;
+}
+
+.contact-heading a:hover {
+  color: var(--color-link);
+}
+
+
+/* ============================================================
+   11. FOOTER
+   ============================================================ */
+.site-footer {
+  padding-top: var(--space-5xl);
+  padding-bottom: var(--space-xl);
+}
+
+.site-footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.site-footer__copy {
+  font-size: var(--font-size-small);
+  color: var(--color-text);
+  text-transform: uppercase;
+}
+
+
+/* ============================================================
+   12. CASE-STUDY PAGES — shared layout
+   ============================================================ */
+.case-study-title {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-base);
+  letter-spacing: var(--letter-spacing-tight);
+  text-transform: uppercase;
+  line-height: var(--line-height-tight);
+  padding-bottom: var(--space-xl);
+}
+
+/* Feed post hero — full bleed, scales with width on mobile, vh-capped on desktop */
+.feed-post-hero {
+  width: 100%;
+  overflow: hidden;
+  aspect-ratio: 3 / 2;
+}
+
+.feed-post-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .feed-post-hero {
+    aspect-ratio: unset;
+    height: clamp(300px, 62vh, 700px);
+  }
+}
+
+/* ============================================================
+   13. CASE-STUDY SECTION TITLE
+   ============================================================ */
+.cs-section__title {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-base);
+  letter-spacing: var(--letter-spacing-tight);
+  text-transform: uppercase;
+  line-height: var(--line-height-tight);
+}
+
+/* Reusable video player — looping, muted, no controls */
+.site-video {
+  width: 100%;
+}
+
+.site-video video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+/* ============================================================
+   14. FEED PAGE (Etcetera)
+   ============================================================ */
+.feed-list {
+  padding-bottom: var(--space-3xl);
+}
+
+/* Each feed item */
+.feed-item {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  border-bottom: var(--border-rule);
+  padding-block: var(--space-2xl);
+}
+
+.feed-item:has(.feed-item__inner:hover) .feed-item__title {
+  text-decoration-color: var(--color-text);
+}
+
+.feed-item:has(.feed-item__inner:hover) .feed-item__cta {
+  color: var(--color-link);
+}
+
+.feed-item__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  align-items: start;
+}
+
+.feed-item__image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+  overflow: hidden;
+}
+
+.feed-item__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.feed-item:has(.feed-item__inner:hover) .feed-item__image img {
+  transform: scale(1.02);
+}
+
+.feed-item__title {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-base);
+  letter-spacing: var(--letter-spacing-tight);
+  text-transform: uppercase;
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--space-sm);
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 4px;
+  text-decoration-color: transparent;
+  transition: text-decoration-color var(--transition-base);
+}
+
+.feed-item__description {
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-normal);
+  max-width: 45ch;
+  margin-bottom: var(--space-md);
+}
+
+.feed-item__cta {
+  font-size: var(--font-size-small);
+  letter-spacing: var(--letter-spacing-tight);
+  text-transform: uppercase;
+  transition: color var(--transition-fast);
+}
+
+
+/* ============================================================
+   15. PETE FOR AMERICA PAGE
+   ============================================================ */
+
+@media (min-width: 1024px) {
+  .pete-placard-grid > *:nth-child(even) {
+    margin-top: var(--space-2xl);
+  }
+}
+
+
+/* ============================================================
+   16. BUTTONS & INLINE LINKS
+   ============================================================ */
+.text-link {
+  color: var(--color-link);
+  text-decoration: none;
+  transition: text-decoration-color var(--transition-fast);
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+.arrow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25em;
+  font-size: var(--font-size-small);
+  letter-spacing: var(--letter-spacing-tight);
+  text-transform: uppercase;
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-base);
+  letter-spacing: var(--letter-spacing-tight);
+  text-transform: uppercase;
+  padding: 0.6em 1.75em;
+  border-radius: 999px;
+  border: 2px solid var(--color-text);
+  background-color: transparent;
+  color: var(--color-text);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+  align-self: flex-start;
+}
+
+.btn-pill:hover {
+  background-color: var(--color-link);
+  border-color: var(--color-link);
+  color: var(--color-background);
+}
+
+.arrow-link:hover {
+  color: var(--color-link);
+}
+
+/* Nudges → up to optically center it against all-caps text */
+.arrow-char {
+  display: inline-block;
+  position: relative;
+  top: -0.07em;
+  transition: transform var(--transition-base);
+}
+
+.arrow-link:hover .arrow-char,
+.btn-pill:hover .arrow-char,
+.project-card:has(.project-card__image-wrap:hover) .arrow-char,
+.project-card:has(.section-label:hover) .arrow-char,
+.project-card:has(.project-card__meta:hover) .arrow-char,
+.feed-item:has(.feed-item__inner:hover) .arrow-char {
+  transform: translateX(4px);
+}
+
+
+/* ============================================================
+   19. FOCUS & ACCESSIBILITY
+   ============================================================ */
+:focus-visible {
+  outline: 2px solid var(--color-link);
+  outline-offset: 3px;
+}
+
+/* Skip to content link */
+.skip-link {
+  position: absolute;
+  top: -999px;
+  left: var(--container-padding);
+  z-index: 200;
+  background: var(--color-text);
+  color: var(--color-background);
+  padding: var(--space-xs) var(--space-sm);
+  font-size: var(--font-size-small);
+  letter-spacing: var(--letter-spacing-tight);
+  text-transform: uppercase;
+}
+
+.skip-link:focus {
+  top: var(--space-xs);
+}
+
+
+/* ============================================================
+   20. ANIMATIONS
+   ============================================================ */
+
+/* Fade-up on scroll — applied via JS IntersectionObserver */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+
+/* ============================================================
+   21. RESPONSIVE OVERRIDES
+   ============================================================ */
+
+/* --- Tablet and up (≥ 768px) --- */
+@media (min-width: 768px) {
+
+  .branding-teaser__row {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-xl);
+  }
+
+  /* Image goes left: swap order so content stays first in DOM (mobile top) */
+  .branding-teaser__image-wrap {
+    order: -1;
+    flex: 1 1 40%;
+  }
+
+  .branding-teaser__content {
+    flex: 1 1 60%;
+  }
+
+  .about-grid {
+    grid-template-columns: 3fr 2fr;
+    gap: var(--space-xl);
+  }
+
+  .feed-item__inner {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+    align-items: center;
+  }
+}
+
+/* --- Desktop (≥ 1024px) --- */
+@media (min-width: 1024px) {
+
+  /* Show desktop nav, hide mobile toggle */
+  .nav-links {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .project-card__image-wrap {
+    max-height: 880px;
+  }
+
+  .feed-item__inner {
+    grid-template-columns: 2fr 3fr;
+    gap: var(--space-3xl);
+  }
+
+  /* Wide about section */
+  .about-grid {
+    grid-template-columns: 3fr 2fr;
+    gap: var(--space-2xl);
+  }
+}
+
+/* --- Mobile only (< 1024px) --- */
+@media (max-width: 1023px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .contact-heading a {
+    max-width: 13ch;
+  }
+}
+
+
+
+/* --- Ultra-wide (> 1710px): freeze layout, add whitespace --- */
+@media (min-width: 1711px) {
+  .container {
+    max-width: var(--max-width);
+  }
+}

@@ -1,0 +1,101 @@
+/*
+ * DESIGN SYSTEM — johnvrhovnik.com rebuild
+ * Source of truth: provided screenshots (390px mobile + 1710px desktop)
+ * Do not add values not visible in screenshots.
+ */
+
+/* ============================================================
+   CUSTOM PROPERTIES
+   ============================================================ */
+:root {
+
+  /* ----------------------------------------------------------
+     COLORS — exactly three, no exceptions
+     ---------------------------------------------------------- */
+  --color-background: #FAFAFA;
+  --color-text:       #000000;
+  --color-link:       #0000FF;
+
+  /* ----------------------------------------------------------
+     TYPOGRAPHY
+     Font family — @font-face is in styles.css (commented out).
+     Fallback stack renders until licensed font files are added.
+     ---------------------------------------------------------- */
+  --font-family: 'Mabry', system-ui, -apple-system, 'Helvetica Neue',
+                 Arial, sans-serif;
+
+  /* Scale — fluid from 390px → 1440px. Preferred = calc(offset + vw)
+     so min is hit exactly at 390px and max at 1440px, with true
+     fluid scaling across the full range. No dead zones.            */
+  --font-size-display:   clamp(2.75rem, calc(1.91rem + 3.43vw), 5rem);    /* 44px → 80px */
+  --font-size-h1:        clamp(2.25rem, calc(1.6rem + 2.67vw), 4rem);     /* 36px → 64px */
+  --font-size-h2:        clamp(1.875rem, calc(1.38rem + 2.02vw), 3.2rem);  /* 30px → 51px */
+  --font-size-h3:        clamp(1.625rem, calc(1.39rem + 0.95vw), 2.25rem); /* 26px → 36px */
+  --font-size-body:      clamp(1.125rem, 1.5vw, 1.25rem);                   /* 18px → 20px */
+  --font-size-largebody: clamp(1.375rem, 2vw, 1.625rem);                    /* 22px → 26px */
+  --font-size-small:     1.1rem;  /* 13px — labels, captions */
+  --font-size-nav:       1.1rem;  /* 13px — nav items */
+
+  /* Weight — single file (Mabry Medium), one token */
+  --font-weight-base: 500;
+
+  /* Leading */
+  --line-height-display: .95;
+  --line-height-tight:   1.1;
+  --line-height-snug:    1.25;
+  --line-height-normal:  1.55;
+  --line-height-loose:   1.7;
+
+  /* Tracking */
+  --letter-spacing-tight:  -0.03em;
+  --letter-spacing-normal:  0em;
+
+  /* ----------------------------------------------------------
+     SPACING — 8-point scale
+     ---------------------------------------------------------- */
+  --space-2xs: 0.25rem;   /*  4px */
+  --space-xs:  0.5rem;    /*  8px */
+  --space-sm:  1rem;      /* 16px */
+  --space-md:  1.5rem;    /* 24px */
+  --space-lg:  2rem;      /* 32px */
+  --space-xl:  3rem;      /* 48px */
+  --space-2xl: 4.5rem;    /* 72px */
+  --space-3xl: 6.5rem;    /* 104px */
+  --space-4xl: 9rem;      /* 144px */
+  --space-5xl: 12rem;     /* 192px */
+
+  /* ----------------------------------------------------------
+     LAYOUT
+     Max-width chosen to match visible content containment
+     in the 1710px desktop screenshots (~1200px content).
+     ---------------------------------------------------------- */
+  --max-width:         1700px;
+  --container-padding: clamp(1.25rem, 4vw, 3rem);
+  --nav-height:        80px;
+
+  /* ----------------------------------------------------------
+     GRID — 12-column
+     ---------------------------------------------------------- */
+  --grid-columns:   12;
+  --grid-gap:       clamp(1rem, 2vw, 1.5rem);   /* column gutter */
+  --grid-row-gap:   clamp(2rem, 4vw, 3rem);      /* row gap — 2× column gutter */
+
+  /* ----------------------------------------------------------
+     TRANSITIONS
+     ---------------------------------------------------------- */
+  --transition-fast:   150ms ease;
+  --transition-base:   250ms ease;
+  --transition-slow:   400ms ease;
+
+  /* ----------------------------------------------------------
+     BORDERS / RULES
+     ---------------------------------------------------------- */
+  --border-rule: 2px solid var(--color-text);
+}
+
+
+/* ============================================================
+   BREAKPOINTS (used as reference — implemented via media queries)
+   Mobile:  < 768px    → 390px screenshot
+   Desktop: ≥ 1024px   → 1710px screenshot
+   ============================================================ */

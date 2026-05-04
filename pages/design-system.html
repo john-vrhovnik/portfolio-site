@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Design System — John Vrhovnik</title>
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/favicons/apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="stylesheet" href="../css/styles.css" />
+
+  <style>
+    /* ── Showcase-only styles ── */
+    .ds-page { padding-block: var(--space-4xl) var(--space-5xl); }
+
+    .ds-section {
+      padding-block: var(--space-3xl);
+      border-top: var(--border-rule);
+    }
+
+    .ds-section__label {
+      font-size: var(--font-size-small);
+      letter-spacing: var(--letter-spacing-tight);
+      text-transform: uppercase;
+      margin-bottom: var(--space-2xl);
+      color: var(--color-text);
+    }
+
+    /* Color swatches */
+    .ds-swatches {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-md);
+    }
+
+    .ds-swatch {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+    }
+
+    .ds-swatch__block {
+      width: 160px;
+      height: 100px;
+      border: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .ds-swatch__name {
+      font-size: var(--font-size-small);
+      letter-spacing: var(--letter-spacing-tight);
+      text-transform: uppercase;
+    }
+
+    .ds-swatch__value {
+      font-size: var(--font-size-small);
+      opacity: 0.5;
+    }
+
+    /* Type specimens */
+    .ds-type-row {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+      padding-block: var(--space-md);
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .ds-type-row:last-child { border-bottom: none; }
+
+    .ds-type-meta {
+      font-size: var(--font-size-small);
+      opacity: 0.5;
+      letter-spacing: var(--letter-spacing-tight);
+      text-transform: uppercase;
+      margin-bottom: var(--space-xs);
+    }
+
+    /* Weight specimens */
+    .ds-weight-row {
+      padding-block: var(--space-sm);
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    .ds-weight-row:last-child { border-bottom: none; }
+
+    /* Line-height specimens */
+    .ds-lh-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: var(--space-lg);
+    }
+
+    .ds-lh-card {
+      padding: var(--space-md);
+      border: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .ds-lh-label {
+      font-size: var(--font-size-small);
+      text-transform: uppercase;
+      letter-spacing: var(--letter-spacing-tight);
+      opacity: 0.5;
+      margin-bottom: var(--space-sm);
+    }
+
+    /* Spacing scale */
+    .ds-space-rows {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+
+    .ds-space-row {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+    }
+
+    .ds-space-row__label {
+      font-size: var(--font-size-small);
+      text-transform: uppercase;
+      letter-spacing: var(--letter-spacing-tight);
+      width: 80px;
+      flex-shrink: 0;
+    }
+
+    .ds-space-row__bar {
+      height: 24px;
+      background-color: var(--color-text);
+      flex-shrink: 0;
+    }
+
+    .ds-space-row__value {
+      font-size: var(--font-size-small);
+      opacity: 0.5;
+    }
+
+    /* Border demos */
+    .ds-border-row {
+      padding-block: var(--space-md);
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    .ds-border-row:last-child { border-bottom: none; }
+
+    /* Transition demos */
+    .ds-transition-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-md);
+    }
+
+    .ds-transition-box {
+      width: 120px;
+      height: 80px;
+      background-color: var(--color-text);
+      display: flex;
+      align-items: flex-end;
+      padding: var(--space-xs);
+    }
+
+    .ds-transition-box span {
+      font-size: var(--font-size-small);
+      text-transform: uppercase;
+      letter-spacing: var(--letter-spacing-tight);
+      color: var(--color-background);
+    }
+
+    .ds-transition-box--fast  { transition: background-color var(--transition-fast); }
+    .ds-transition-box--base  { transition: background-color var(--transition-base); }
+    .ds-transition-box--slow  { transition: background-color var(--transition-slow); }
+
+    .ds-transition-box:hover { background-color: var(--color-link); }
+
+    /* Component demos */
+    .ds-component-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--space-lg);
+      padding-block: var(--space-md);
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    .ds-component-row:last-child { border-bottom: none; }
+
+    .ds-component-label {
+      font-size: var(--font-size-small);
+      text-transform: uppercase;
+      letter-spacing: var(--letter-spacing-tight);
+      opacity: 0.5;
+      min-width: 160px;
+    }
+
+    /* Layout token row */
+    .ds-layout-row {
+      display: flex;
+      align-items: baseline;
+      gap: var(--space-md);
+      padding-block: var(--space-sm);
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    .ds-layout-row:last-child { border-bottom: none; }
+
+    .ds-layout-token {
+      font-size: var(--font-size-small);
+      text-transform: uppercase;
+      letter-spacing: var(--letter-spacing-tight);
+      min-width: 220px;
+    }
+
+    .ds-layout-value {
+      font-size: var(--font-size-small);
+      opacity: 0.5;
+    }
+
+    /* Reveal demo */
+    .ds-reveal-demo {
+      width: 100%;
+      height: 120px;
+      background-color: #e8e8e8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--font-size-small);
+      text-transform: uppercase;
+      letter-spacing: var(--letter-spacing-tight);
+    }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- NAV -->
+  <nav class="nav" aria-label="Site navigation">
+    <a href="../index.html" class="nav-logo" aria-label="John Vrhovnik — Home">JV–</a>
+
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-drawer">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" role="list">
+      <li><a href="progressive-purpose.html" class="nav-link">01 /</a></li>
+      <li><a href="fetchmate.html"           class="nav-link">02 /</a></li>
+      <li><a href="progressive-digital.html" class="nav-link">03 /</a></li>
+      <li><a href="etcetera.html"                class="nav-link">Etc.</a></li>
+    </ul>
+  </nav>
+
+  <nav id="nav-drawer" class="nav-drawer" aria-label="Mobile navigation">
+    <a href="progressive-purpose.html" class="nav-link">01 /</a>
+    <a href="fetchmate.html"           class="nav-link">02 /</a>
+    <a href="progressive-digital.html" class="nav-link">03 /</a>
+    <a href="etcetera.html"                class="nav-link">Etc.</a>
+  </nav>
+
+  <main id="main" class="page-body">
+    <div class="ds-page container">
+
+      <!-- Page header -->
+      <div style="padding-block: var(--space-3xl) var(--space-5xl);">
+        <p style="font-size: var(--font-size-small); text-transform: uppercase; letter-spacing: var(--letter-spacing-tight); opacity: 0.5; margin-bottom: var(--space-sm);">Johnvrhovnik.com – Tokens and styles</p>
+        <h1 style="font-size: var(--font-size-h1); font-weight: var(--font-weight-base); letter-spacing: var(--letter-spacing-tight); line-height: var(--line-height-tight); text-transform: uppercase;">Design System</h1>
+      </div>
+
+
+      <!-- ══════════════════════════════════════════
+           COLORS
+           ══════════════════════════════════════════ -->
+      <section class="ds-section" aria-label="Colors">
+        <p class="ds-section__label">01 / Colors</p>
+        <div class="ds-swatches">
+
+          <div class="ds-swatch">
+            <div class="ds-swatch__block" style="background-color: #FAFAFA;"></div>
+            <p class="ds-swatch__name">Background</p>
+            <p class="ds-swatch__value">--color-background</p>
+            <p class="ds-swatch__value">#FAFAFA</p>
+          </div>
+
+          <div class="ds-swatch">
+            <div class="ds-swatch__block" style="background-color: #000000;"></div>
+            <p class="ds-swatch__name">Text</p>
+            <p class="ds-swatch__value">--color-text</p>
+            <p class="ds-swatch__value">#000000</p>
+          </div>
+
+          <div class="ds-swatch">
+            <div class="ds-swatch__block" style="background-color: #0000FF;"></div>
+            <p class="ds-swatch__name">Link / Brand Blue</p>
+            <p class="ds-swatch__value">--color-link</p>
+            <p class="ds-swatch__value">#0000FF</p>
+          </div>
+
+          <div class="ds-swatch">
+            <div class="ds-swatch__block" style="background-color: #4e4e4e;"></div>
+            <p class="ds-swatch__name">Muted (display links)</p>
+            <p class="ds-swatch__value">Hardcoded</p>
+            <p class="ds-swatch__value">#4E4E4E</p>
+          </div>
+
+          <div class="ds-swatch">
+            <div class="ds-swatch__block" style="background-color: #1a1a1a;"></div>
+            <p class="ds-swatch__name">Dark tile bg</p>
+            <p class="ds-swatch__value">Hardcoded</p>
+            <p class="ds-swatch__value">#1A1A1A</p>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- ══════════════════════════════════════════
+           TYPOGRAPHY — SIZES
+           ══════════════════════════════════════════ -->
+      <section class="ds-section" aria-label="Typography sizes">
+        <p class="ds-section__label">02 / Type Scale</p>
+
+        <div class="ds-type-row">
+          <p class="ds-type-meta">--font-size-display &nbsp;·&nbsp; clamp(2.75rem → 5rem) &nbsp;·&nbsp; 44px–80px</p>
+          <p style="font-size: var(--font-size-display); font-weight: var(--font-weight-base); line-height: var(--line-height-display); letter-spacing: var(--letter-spacing-tight); text-transform: uppercase;">Display</p>
+        </div>
+
+        <div class="ds-type-row">
+          <p class="ds-type-meta">--font-size-h1 &nbsp;·&nbsp; clamp(2.25rem → 4rem) &nbsp;·&nbsp; 36px–64px</p>
+          <p style="font-size: var(--font-size-h1); font-weight: var(--font-weight-base); line-height: var(--line-height-tight); letter-spacing: var(--letter-spacing-tight); text-transform: uppercase;">Heading 1</p>
+        </div>
+
+        <div class="ds-type-row">
+          <p class="ds-type-meta">--font-size-h2 &nbsp;·&nbsp; clamp(1.875rem → 3.2rem) &nbsp;·&nbsp; 30px–51px</p>
+          <p style="font-size: var(--font-size-h2); font-weight: var(--font-weight-base); line-height: var(--line-height-tight); letter-spacing: var(--letter-spacing-tight); text-transform: uppercase;">Heading 2</p>
+        </div>
+
+        <div class="ds-type-row">
+          <p class="ds-type-meta">--font-size-h3 &nbsp;·&nbsp; clamp(1.625rem → 2.25rem) &nbsp;·&nbsp; 26px–36px</p>
+          <p style="font-size: var(--font-size-h3); font-weight: var(--font-weight-base); line-height: var(--line-height-snug); letter-spacing: var(--letter-spacing-tight); text-transform: uppercase;">Heading 3</p>
+        </div>
+
+        <div class="ds-type-row">
+          <p class="ds-type-meta">--font-size-largebody &nbsp;·&nbsp; clamp(1.375rem → 1.625rem) &nbsp;·&nbsp; 22px–26px</p>
+          <p style="font-size: var(--font-size-largebody); font-weight: var(--font-weight-regular); line-height: var(--line-height-normal);">Large body — used for the about headline and lead copy. Sits between h3 and body in the scale.</p>
+        </div>
+
+        <div class="ds-type-row">
+          <p class="ds-type-meta">--font-size-body &nbsp;·&nbsp; clamp(1.125rem → 1.25rem) &nbsp;·&nbsp; 18px–20px</p>
+          <p style="font-size: var(--font-size-body); line-height: var(--line-height-normal);">Body — the default paragraph size. Used across all content blocks, case study sections, and meta items. Readable at all viewport widths with fluid scaling.</p>
+        </div>
+
+        <div class="ds-type-row">
+          <p class="ds-type-meta">--font-size-small &nbsp;·&nbsp; 1.1rem &nbsp;·&nbsp; ~17.6px fixed</p>
+          <p style="font-size: var(--font-size-small); text-transform: uppercase; letter-spacing: var(--letter-spacing-tight);">Small — labels, captions, nav items, footer text, CTAs</p>
+        </div>
+
+        <div class="ds-type-row">
+          <p class="ds-type-meta">--font-size-nav &nbsp;·&nbsp; 1.1rem &nbsp;·&nbsp; ~17.6px fixed</p>
+          <p style="font-size: var(--font-size-nav);">Nav — matches small; separate token for independent control</p>
+        </div>
+
+      </section>
+
+
+      <!-- ══════════════════════════════════════════
+           TYPOGRAPHY — WEIGHT
+           ══════════════════════════════════════════ -->
+      <section class="ds-section" aria-label="Font weight">
+        <p class="ds-section__label">03 / Font Weight</p>
+
+        <div class="ds-weight-row">
+          <p class="ds-type-meta">--font-weight-base &nbsp;·&nbsp; 500 &nbsp;·&nbsp; Single file (Mabry Medium) — all weights render identically</p>
+          <p style="font-size: var(--font-size-h3); font-weight: 500;">The quick brown fox</p>
+        </div>
+
+      </section>
+
+
+      <!-- ══════════════════════════════════════════
+           TYPOGRAPHY — LINE HEIGHTS
+           ══════════════════════════════════════════ -->
+      <section class="ds-section" aria-label="Line heights">
+        <p class="ds-section__label">04 / Line Heights</p>
+        <div class="ds-lh-grid">
+
+          <div class="ds-lh-card">
+            <p class="ds-lh-label">Display &nbsp;·&nbsp; .95</p>
+            <p style="font-size: var(--font-size-h3); font-weight: var(--font-weight-base); line-height: .95; text-transform: uppercase;">Hero text display tight</p>
+          </div>
+
+          <div class="ds-lh-card">
+            <p class="ds-lh-label">Tight &nbsp;·&nbsp; 1.1</p>
+            <p style="font-size: var(--font-size-h3); font-weight: var(--font-weight-base); line-height: 1.1; text-transform: uppercase;">Headings and titles</p>
+          </div>
+
+          <div class="ds-lh-card">
+            <p class="ds-lh-label">Snug &nbsp;·&nbsp; 1.25</p>
+            <p style="font-size: var(--font-size-body); line-height: 1.25;">Pull quotes and subheadings benefit from slightly looser spacing here.</p>
+          </div>
+
+          <div class="ds-lh-card">
+            <p class="ds-lh-label">Normal &nbsp;·&nbsp; 1.55</p>
+            <p style="font-size: var(--font-size-body); line-height: 1.55;">Default paragraph text. Comfortable reading rhythm for longer passages of content on the page.</p>
+          </div>
+
+          <div class="ds-lh-card">
+            <p class="ds-lh-label">Loose &nbsp;·&nbsp; 1.7</p>
+            <p style="font-size: var(--font-size-body); line-height: 1.7;">Case study body copy. Slightly airy to aid long-form legibility in content-heavy sections.</p>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- ══════════════════════════════════════════
+           TYPOGRAPHY — LETTER SPACING
+           ══════════════════════════════════════════ -->
+      <section class="ds-section" aria-label="Letter spacing">
+        <p class="ds-section__label">05 / Letter Spacing</p>
+
+        <div class="ds-weight-row">
+          <p class="ds-type-meta">--letter-spacing-tight &nbsp;·&nbsp; -0.03em</p>
+          <p style="font-size: var(--font-size-h3); font-weight: var(--font-weight-base); letter-spacing: -0.03em; text-transform: uppercase;">Tight — headlines, labels, CTAs</p>
+        </div>
+
+        <div class="ds-weight-row">
+          <p class="ds-type-meta">--letter-spacing-normal &nbsp;·&nbsp; 0em</p>
+          <p style="font-size: var(--font-size-h3); font-weight: var(--font-weight-base); letter-spacing: 0em; text-transform: uppercase;">Normal — nav links</p>
+        </div>
+
+      </section>
+
+
+      <!-- ══════════════════════════════════════════
+           SPACING SCALE
+           ══════════════════════════════════════════ -->
+      <section class="ds-section" aria-label="Spacing scale">
+        <p class="ds-section__label">06 / Spacing Scale</p>
+        <div class="ds-space-rows">
+
+          <div class="ds-space-row">
+            <p class="ds-space-row__label">2xs</p>
+            <div class="ds-space-row__bar" style="width: var(--space-2xs);"></div>
+            <p class="ds-space-row__value">0.25rem &nbsp;/&nbsp; 4px</p>
+          </div>
+
+          <div class="ds-space-row">
+            <p class="ds-space-row__label">xs</p>
+            <div class="ds-space-row__bar" style="width: var(--space-xs);"></div>
+            <p class="ds-space-row__value">0.5rem &nbsp;/&nbsp; 8px</p>
+          </div>
+
+          <div class="ds-space-row">
+            <p class="ds-space-row__label">sm</p>
+            <div class="ds-space-row__bar" style="width: var(--space-sm);"></div>
+            <p class="ds-space-row__value">1rem &nbsp;/&nbsp; 16px</p>
+          </div>
+
+          <div class="ds-space-row">
+            <p class="ds-space-row__label">md</p>
+            <div class="ds-space-row__bar" style="width: var(--space-md);"></div>
+            <p class="ds-space-row__value">1.5rem &nbsp;/&nbsp; 24px</p>
+          </div>
+
+          <div class="ds-space-row">
+            <p class="ds-space-row__label">lg</p>
+            <div class="ds-space-row__bar" style="width: var(--space-lg);"></div>
+            <p class="ds-space-row__value">2rem &nbsp;/&nbsp; 32px</p>
+          </div>
+
+          <div class="ds-space-row">
+            <p class="ds-space-row__label">xl</p>
+            <div class="ds-space-row__bar" style="width: var(--space-xl);"></div>
+            <p class="ds-space-row__value">3rem &nbsp;/&nbsp; 48px</p>
+          </div>
+
+          <div class="ds-space-row">
+            <p class="ds-space-row__label">2xl</p>
+            <div class="ds-space-row__bar" style="width: var(--space-2xl);"></div>
+            <p class="ds-space-row__value">4.5rem &nbsp;/&nbsp; 72px</p>
+          </div>
+
+          <div class="ds-space-row">
+            <p class="ds-space-row__label">3xl</p>
+            <div class="ds-space-row__bar" style="width: var(--space-3xl);"></div>
+            <p class="ds-space-row__value">6.5rem &nbsp;/&nbsp; 104px</p>
+          </div>
+
+          <div class="ds-space-row">
+            <p class="ds-space-row__label">4xl</p>
+            <div class="ds-space-row__bar" style="width: var(--space-4xl);"></div>
+            <p class="ds-space-row__value">9rem &nbsp;/&nbsp; 144px</p>
+          </div>
+
+          <div class="ds-space-row">
+            <p class="ds-space-row__label">5xl</p>
+            <div class="ds-space-row__bar" style="width: var(--space-5xl);"></div>
+            <p class="ds-space-row__value">12rem &nbsp;/&nbsp; 192px</p>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- ══════════════════════════════════════════
+           TRANSITIONS
+           ══════════════════════════════════════════ -->
+      <section class="ds-section" aria-label="Transitions">
+        <p class="ds-section__label">07 / Transitions</p>
+        <p style="font-size: var(--font-size-small); text-transform: uppercase; letter-spacing: var(--letter-spacing-tight); opacity: 0.5; margin-bottom: var(--space-lg);">Hover each box to compare speed</p>
+        <div class="ds-transition-grid">
+
+          <div>
+            <div class="ds-transition-box ds-transition-box--fast">
+              <span>Fast</span>
+            </div>
+            <p style="font-size: var(--font-size-small); text-transform: uppercase; letter-spacing: var(--letter-spacing-tight); opacity: 0.5; margin-top: var(--space-xs);">150ms ease</p>
+          </div>
+
+          <div>
+            <div class="ds-transition-box ds-transition-box--base">
+              <span>Base</span>
+            </div>
+            <p style="font-size: var(--font-size-small); text-transform: uppercase; letter-spacing: var(--letter-spacing-tight); opacity: 0.5; margin-top: var(--space-xs);">250ms ease</p>
+          </div>
+
+          <div>
+            <div class="ds-transition-box ds-transition-box--slow">
+              <span>Slow</span>
+            </div>
+            <p style="font-size: var(--font-size-small); text-transform: uppercase; letter-spacing: var(--letter-spacing-tight); opacity: 0.5; margin-top: var(--space-xs);">400ms ease</p>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- ══════════════════════════════════════════
+           GRID
+           ══════════════════════════════════════════ -->
+      <section class="ds-section" aria-label="Grid system">
+        <p class="ds-section__label">08 / Grid</p>
+
+        <div class="ds-layout-row">
+          <p class="ds-layout-token">--grid-columns</p>
+          <p class="ds-layout-value">12</p>
+        </div>
+        <div class="ds-layout-row">
+          <p class="ds-layout-token">--grid-gap</p>
+          <p class="ds-layout-value">clamp(1rem, 2vw, 1.5rem) — column gutter</p>
+        </div>
+        <div class="ds-layout-row" style="margin-bottom: var(--space-xl);">
+          <p class="ds-layout-token">--grid-row-gap</p>
+          <p class="ds-layout-value">clamp(2rem, 4vw, 3rem) — row gap, 2× column gutter</p>
+        </div>
+
+        <p style="font-size: var(--font-size-small); text-transform: uppercase; letter-spacing: var(--letter-spacing-tight); opacity: 0.5; margin-bottom: var(--space-md);">12-column grid — .grid + .col-{n}</p>
+        <div class="grid" style="margin-bottom: var(--space-xl);">
+          <div class="col-1"  style="background:#e8e8e8; padding: var(--space-xs); font-size: var(--font-size-small); text-align:center;">1</div>
+          <div class="col-1"  style="background:#e8e8e8; padding: var(--space-xs); font-size: var(--font-size-small); text-align:center;">2</div>
+          <div class="col-1"  style="background:#e8e8e8; padding: var(--space-xs); font-size: var(--font-size-small); text-align:center;">3</div>
+          <div class="col-1"  style="background:#e8e8e8; padding: var(--space-xs); font-size: var(--font-size-small); text-align:center;">4</div>
+          <div class="col-1"  style="background:#e8e8e8; padding: var(--space-xs); font-size: var(--font-size-small); text-align:center;">5</div>
+          <div class="col-1"  style="background:#e8e8e8; padding: var(--space-xs); font-size: var(--font-size-small); text-align:center;">6</div>
+          <div class="col-1"  style="background:#e8e8e8; padding: var(--space-xs); font-size: var(--font-size-small); text-align:center;">7</div>
+          <div class="col-1"  style="background:#e8e8e8; padding: var(--space-xs); font-size: var(--font-size-small); text-align:center;">8</div>
+          <div class="col-1"  style="background:#e8e8e8; padding: var(--space-xs); font-size: var(--font-size-small); text-align:center;">9</div>
+          <div class="col-1"  style="background:#e8e8e8; padding: var(--space-xs); font-size: var(--font-size-small); text-align:center;">10</div>
+          <div class="col-1"  style="background:#e8e8e8; padding: var(--space-xs); font-size: var(--font-size-small); text-align:center;">11</div>
+          <div class="col-1"  style="background:#e8e8e8; padding: var(--space-xs); font-size: var(--font-size-small); text-align:center;">12</div>
+        </div>
+
+        <p style="font-size: var(--font-size-small); text-transform: uppercase; letter-spacing: var(--letter-spacing-tight); opacity: 0.5; margin-bottom: var(--space-md);">Common span examples</p>
+        <div class="grid" style="margin-bottom: var(--space-sm);">
+          <div class="col-6"  style="background:#e8e8e8; padding: var(--space-xs); font-size: var(--font-size-small);">.col-6 (half)</div>
+          <div class="col-6"  style="background:#e8e8e8; padding: var(--space-xs); font-size: var(--font-size-small);">.col-6 (half)</div>
+        </div>
+        <div class="grid" style="margin-bottom: var(--space-sm);">
+          <div class="col-4"  style="background:#e8e8e8; padding: var(--space-xs); font-size: var(--font-size-small);">.col-4 (third)</div>
+          <div class="col-4"  style="background:#e8e8e8; padding: var(--space-xs); font-size: var(--font-size-small);">.col-4 (third)</div>
+          <div class="col-4"  style="background:#e8e8e8; padding: var(--space-xs); font-size: var(--font-size-small);">.col-4 (third)</div>
+        </div>
+        <div class="grid" style="margin-bottom: var(--space-sm);">
+          <div class="col-3"  style="background:#e8e8e8; padding: var(--space-xs); font-size: var(--font-size-small);">.col-3 (quarter)</div>
+          <div class="col-3"  style="background:#e8e8e8; padding: var(--space-xs); font-size: var(--font-size-small);">.col-3 (quarter)</div>
+          <div class="col-3"  style="background:#e8e8e8; padding: var(--space-xs); font-size: var(--font-size-small);">.col-3 (quarter)</div>
+          <div class="col-3"  style="background:#e8e8e8; padding: var(--space-xs); font-size: var(--font-size-small);">.col-3 (quarter)</div>
+        </div>
+        <div class="grid" style="margin-bottom: var(--space-sm);">
+          <div class="col-8"  style="background:#e8e8e8; padding: var(--space-xs); font-size: var(--font-size-small);">.col-8</div>
+          <div class="col-4"  style="background:#e8e8e8; padding: var(--space-xs); font-size: var(--font-size-small);">.col-4</div>
+        </div>
+        <div class="grid" style="margin-bottom: var(--space-xl);">
+          <div class="col-start-2 col-10" style="background:#e8e8e8; padding: var(--space-xs); font-size: var(--font-size-small);">.col-start-2 .col-10 (offset 1)</div>
+        </div>
+
+        <p style="font-size: var(--font-size-small); text-transform: uppercase; letter-spacing: var(--letter-spacing-tight); opacity: 0.5; margin-bottom: var(--space-xs);">Classes available</p>
+        <p style="font-size: var(--font-size-small); opacity: 0.5;">.col-{1–12} &nbsp;·&nbsp; .col-sm-{1–12} (≥768px) &nbsp;·&nbsp; .col-lg-{1–12} (≥1024px) &nbsp;·&nbsp; .col-start-{1–12} &nbsp;·&nbsp; .col-sm-start-{1–12} &nbsp;·&nbsp; .col-lg-start-{1–12}</p>
+
+      </section>
+
+
+      <!-- ══════════════════════════════════════════
+           LAYOUT TOKENS
+           ══════════════════════════════════════════ -->
+      <section class="ds-section" aria-label="Layout tokens">
+        <p class="ds-section__label">10 / Layout</p>
+
+        <div class="ds-layout-row">
+          <p class="ds-layout-token">--max-width</p>
+          <p class="ds-layout-value">1700px — content container cap</p>
+        </div>
+
+        <div class="ds-layout-row">
+          <p class="ds-layout-token">--container-padding</p>
+          <p class="ds-layout-value">clamp(1.25rem, 4vw, 3rem) — fluid horizontal gutter</p>
+        </div>
+
+        <div class="ds-layout-row">
+          <p class="ds-layout-token">--nav-height</p>
+          <p class="ds-layout-value">80px — fixed nav bar, page-body offset</p>
+        </div>
+
+        <div class="ds-layout-row">
+          <p class="ds-layout-token">Breakpoint: tablet</p>
+          <p class="ds-layout-value">≥ 768px — 2-col grids, branding teaser row layout</p>
+        </div>
+
+        <div class="ds-layout-row">
+          <p class="ds-layout-token">Breakpoint: desktop</p>
+          <p class="ds-layout-value">≥ 1024px — 3–4-col grids, desktop nav visible</p>
+        </div>
+
+        <div class="ds-layout-row">
+          <p class="ds-layout-token">Breakpoint: ultra-wide</p>
+          <p class="ds-layout-value">> 1710px — container locks at max-width</p>
+        </div>
+
+      </section>
+
+
+      <!-- ══════════════════════════════════════════
+           COMPONENTS
+           ══════════════════════════════════════════ -->
+      <section class="ds-section" aria-label="Components">
+        <p class="ds-section__label">09 / Components</p>
+
+        <!-- Nav logo -->
+        <div class="ds-component-row">
+          <p class="ds-component-label">.nav-logo</p>
+          <a href="../index.html" class="nav-logo" style="position: static; transform: none;">JV–</a>
+        </div>
+
+        <!-- Nav link -->
+        <div class="ds-component-row">
+          <p class="ds-component-label">.nav-link</p>
+          <a href="#" class="nav-link">01 /</a>
+          <a href="#" class="nav-link is-active">02 / (active)</a>
+          <a href="#" class="nav-link">Etc.</a>
+        </div>
+
+        <!-- Section label -->
+        <div class="ds-component-row">
+          <p class="ds-component-label">.section-label</p>
+          <p class="section-label">About /</p>
+        </div>
+
+        <!-- CS section number -->
+        <div class="ds-component-row">
+          <p class="ds-component-label">.cs-section__number</p>
+          <p class="cs-section__number">01 / Brief</p>
+        </div>
+
+        <!-- Meta item label -->
+        <div class="ds-component-row">
+          <p class="ds-component-label">.meta-item__label</p>
+          <p class="meta-item__label">Role</p>
+        </div>
+
+        <!-- Meta item value -->
+        <div class="ds-component-row">
+          <p class="ds-component-label">.meta-item__value</p>
+          <p class="meta-item__value">UX Designer — Figma, Prototyping, Site Mapping</p>
+        </div>
+
+        <!-- Arrow link -->
+        <div class="ds-component-row">
+          <p class="ds-component-label">.arrow-link</p>
+          <a href="#" class="arrow-link">Resume ↗</a>
+          <a href="#" class="arrow-link">LinkedIn ↗</a>
+          <a href="#" class="arrow-link">View Live Site ↗</a>
+          <span class="arrow-link">View Case Study →</span>
+          <span class="arrow-link">See More →</span>
+        </div>
+
+        <!-- Text link -->
+        <div class="ds-component-row">
+          <p class="ds-component-label">.text-link</p>
+          <a href="#" class="text-link">Inline text link</a>
+        </div>
+
+        <!-- Display link -->
+        <div class="ds-component-row">
+          <p class="ds-component-label">.display-link</p>
+          <a href="#" class="display-link" style="font-size: var(--font-size-h2); font-weight: var(--font-weight-base); letter-spacing: var(--letter-spacing-tight); text-transform: uppercase;">Progressive</a>
+        </div>
+
+        <!-- Btn pill -->
+        <div class="ds-component-row">
+          <p class="ds-component-label">.btn-pill</p>
+          <a href="#" class="btn-pill">See work&ensp;→</a>
+        </div>
+
+        <!-- Reveal animation -->
+        <div class="ds-component-row" style="flex-direction: column; align-items: flex-start;">
+          <p class="ds-component-label" style="margin-bottom: var(--space-md);">.reveal → .is-visible (scroll fade-up)</p>
+          <div class="ds-reveal-demo reveal">
+            Scroll this into view — fades up from 24px below
+          </div>
+        </div>
+
+      </section>
+
+
+      <!-- ══════════════════════════════════════════
+           FONT FAMILY
+           ══════════════════════════════════════════ -->
+      <section class="ds-section" aria-label="Font family">
+        <p class="ds-section__label">10 / Font Family</p>
+
+        <div class="ds-layout-row">
+          <p class="ds-layout-token">--font-family</p>
+          <p class="ds-layout-value">'Mabry', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif</p>
+        </div>
+
+        <div class="ds-layout-row">
+          <p class="ds-layout-token">File</p>
+          <p class="ds-layout-value">fonts/mabry-medium.woff2 — single file, weight range 100–900</p>
+        </div>
+
+        <div style="margin-top: var(--space-xl);">
+          <p style="font-size: var(--font-size-display); font-weight: var(--font-weight-base); line-height: var(--line-height-display); letter-spacing: var(--letter-spacing-tight);">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+          <p style="font-size: var(--font-size-display); font-weight: var(--font-weight-base); line-height: var(--line-height-display); letter-spacing: var(--letter-spacing-tight);">0 1 2 3 4 5 6 7 8 9 ! @ # $ % &amp; * ( ) — ↗ →</p>
+        </div>
+
+      </section>
+
+    </div><!-- /.ds-page -->
+  </main>
+
+  <footer class="site-footer container">
+    <div class="site-footer__inner">
+      <span class="site-footer__copy">© 2026 John Vrhovnik</span>
+      <a href="mailto:johnvrhovnik@gmail.com" class="arrow-link">johnvrhovnik@gmail.com ↗</a>
+    </div>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

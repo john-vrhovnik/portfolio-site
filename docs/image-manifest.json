@@ -1,0 +1,389 @@
+{
+  "generated": "2026-04-12",
+  "total_images": 114,
+  "total_size_mb": 35,
+  "pages": {
+    "home": {
+      "url": "https://johnvrhovnik.com/",
+      "images": [
+        {
+          "local": "home-project01-progressive-purpose-banner.jpeg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/6dad9903-a9d5-4deb-9ea8-120069e7b449/Purpose_Banner_Denoised.jpeg",
+          "context": "Project 01 card thumbnail"
+        },
+        {
+          "local": "home-project02-fetchmate-cover.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/0055a73e-28aa-4b52-84d7-b3a4e0ead353/Fetchmate_Cover.jpg",
+          "context": "Project 02 card thumbnail"
+        },
+        {
+          "local": "home-project03-digital-ads-cover.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/f445d54f-a350-4c1f-bbde-65fc13b69974/DigitalAds_Cover.jpg",
+          "context": "Project 03 card thumbnail"
+        },
+        {
+          "local": "home-about-john-portrait.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/da74134a-d770-4330-bb54-51e642c3f20d/John_Vrhovnik_132A1686_Full.jpg",
+          "context": "About section — John's portrait photo"
+        },
+        {
+          "local": "home-branding-cover.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/fdd61944-92e4-42f2-9562-b422ddb7d6db/Branding_Cover2.jpg",
+          "context": "Branding section thumbnail"
+        }
+      ]
+    },
+    "progressive-purpose": {
+      "url": "https://johnvrhovnik.com/progressive-purpose",
+      "images": [
+        {
+          "local": "progressive-purpose-hero.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/82301fd8-2492-4f13-ad66-80e4680b5d6f/Purpose_Statement.jpg",
+          "context": "Hero / cover image"
+        },
+        {
+          "local": "progressive-purpose-sitemap.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/430b23fe-f85e-4147-9136-276ce8d54214/Purpose_SiteMap.jpg",
+          "context": "Section 02 — Site Map"
+        },
+        {
+          "local": "progressive-purpose-iteration.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/eb0b4a2d-e984-4de5-8ba1-ff6eb9ed10dd/Purpose_Iteration.jpg",
+          "context": "Section 03 — Iteration"
+        },
+        {
+          "local": "progressive-purpose-visual-identity-01.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/b5c45afb-5df4-4d1a-b0f3-33bca208b3f1/Purpose_VisualIdentity1.jpg",
+          "context": "Section 04 — Visual Identity 1"
+        },
+        {
+          "local": "progressive-purpose-visual-identity-02.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/723672e0-7770-4b51-93ad-dec27c4ec38b/Purpose_VisualIdentity2.jpg",
+          "context": "Section 04 — Visual Identity 2"
+        },
+        {
+          "local": "progressive-purpose-visual-identity-03.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/e0c6f658-03e3-4a4a-a3b3-6f70adafc832/Purpose_VisualIdentity3.jpg",
+          "context": "Section 04 — Visual Identity 3"
+        },
+        {
+          "local": "progressive-purpose-visual-identity-04.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/eae8e65f-8390-44b7-9743-33576c5425cc/Purpose_VisualIdentity4.jpg",
+          "context": "Section 04 — Visual Identity 4"
+        },
+        {
+          "local": "progressive-purpose-uikit-01.png",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/7f504783-74df-4ae9-a79a-5784cc73fb0b/Purpose_UIKit0-1.png",
+          "context": "Section 05 — UI Kit: Article Tiles"
+        },
+        {
+          "local": "progressive-purpose-uikit-02.png",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/f5f8e519-56e7-45ae-8df8-db93df24fdec/Purpose_UIKit0-2.png",
+          "context": "Section 05 — UI Kit: Call to Action"
+        },
+        {
+          "local": "progressive-purpose-uikit-03.png",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/54b1cde2-1ac4-4fe9-a87f-eb6e45862c77/Purpose_UIKit0-3.png",
+          "context": "Section 05 — UI Kit: Content Modules"
+        },
+        {
+          "local": "progressive-purpose-uikit-04.png",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/aaa16f0d-6696-4d01-8ba1-770b63636e9f/Purpose_UIKit0-4.png",
+          "context": "Section 05 — UI Kit: Article Header"
+        },
+        {
+          "local": "progressive-purpose-uikit-05.png",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/daa276f4-71a5-462a-b138-cbdc767d78d9/Purpose_UIKit0-5.png",
+          "context": "Section 05 — UI Kit: Campaign Tiles"
+        },
+        {
+          "local": "progressive-purpose-uikit-06.png",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/e6288395-a54a-41e5-9ba1-136ef9f6755d/Purpose_UIKit0-6.png",
+          "context": "Section 05 — UI Kit component 6"
+        },
+        {
+          "local": "progressive-purpose-uikit-07.png",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/8f4da3a2-a7d4-4fc4-8950-63cf06489e55/Purpose_UIKit0-7.png",
+          "context": "Section 05 — UI Kit component 7"
+        },
+        {
+          "local": "progressive-purpose-uikit-08.png",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/805538e4-35e4-4d2b-86d9-01a04109218d/Purpose_UIKit0-8.png",
+          "context": "Section 05 — UI Kit component 8"
+        },
+        {
+          "local": "progressive-purpose-uikit-09.png",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/ae396750-07a5-44e9-9b53-5579272e532a/Purpose_UIKit0-9.png",
+          "context": "Section 05 — UI Kit component 9"
+        }
+      ]
+    },
+    "fetchmate": {
+      "url": "https://johnvrhovnik.com/fetchmate",
+      "images": [
+        {
+          "local": "fetchmate-hero-feature.png",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/e6997bad-94bb-48e0-a424-c83dff01bd21/01_FetchMate_FeatureImage.png",
+          "context": "Hero feature image"
+        },
+        {
+          "local": "fetchmate-market-research.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/9d5a06ce-41f3-4a8d-b3ea-ec42566e7d80/02_FetchMate_Problems.jpg",
+          "context": "Section 02 — Market Research / competitor problems"
+        },
+        {
+          "local": "fetchmate-user-research-quote.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/ff334e5b-f468-43b1-996a-0116e7541f3a/03_FetchMate_ResearchQuote.jpg",
+          "context": "Section 03 — User Research quote"
+        },
+        {
+          "local": "fetchmate-user-persona.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/e28202ff-bb7b-4fda-9b06-7a486a414d15/04_FetchMate_UserPersona.jpg",
+          "context": "Section 04 — User Persona"
+        },
+        {
+          "local": "fetchmate-user-flow.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/af1577d8-5644-4fa2-a2b4-c550db97186b/05_FetchMate_UserFlow.jpg",
+          "context": "Section 05 — User Flow diagram"
+        },
+        {
+          "local": "fetchmate-wireframe-sketches.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/69c6e1dc-1f62-444d-b174-551f1926fc09/06_FetchMate_Sketches.jpg",
+          "context": "Section 06 — Wireframe sketches"
+        },
+        {
+          "local": "fetchmate-wireframes.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/7bcdbcf8-a82d-46f3-878a-68d59f840447/07_FetchMate_Wireframes.jpg",
+          "context": "Section 06 — Lo-fi wireframes"
+        },
+        {
+          "local": "fetchmate-iteration.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/60723640-5cb3-4109-a8df-b6ac1df87152/08_FetchMate_Iteration.jpg",
+          "context": "Section 06 — Dashboard iteration lo-fi to hi-fi"
+        },
+        {
+          "local": "fetchmate-home-screens.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/f0a0d9d1-1055-49a7-8361-c22bf7d160ed/09_FetchMate_HomeScreens.jpg",
+          "context": "Section 07 — Visual Design home screens"
+        },
+        {
+          "local": "fetchmate-walker-search.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/f584d67a-e56f-4319-8f4e-b683cb0b1c32/10_FetchMate_WalkerSearch.jpg",
+          "context": "Section 07 — Walker search screens"
+        },
+        {
+          "local": "fetchmate-confirmation.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/02163029-bab4-444c-891a-8282cc67db2a/11_FetchMate_Confirmation.jpg",
+          "context": "Section 07 — Confirmation screens"
+        },
+        {
+          "local": "fetchmate-screen-collage.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/6e307ee7-e2ab-42ed-9d51-8f60aa700b06/12_FetchMate_ScreenCollage.jpg",
+          "context": "Section 07 — Full screen collage"
+        },
+        {
+          "local": "fetchmate-moodboard.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/c1ee3ab2-c341-45c1-aeb4-2b9d8948145f/13_FetchMate_Moodboard.jpg",
+          "context": "Section 08 — Brand moodboard"
+        },
+        {
+          "local": "fetchmate-branding.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/c8bc9492-7f4f-4d78-80d9-fd9e41923222/14_FetchMate_Branding.jpg",
+          "context": "Section 08 — Logo + color palette"
+        },
+        {
+          "local": "fetchmate-uikit.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/9c7df5cb-5a71-44b2-b8b6-94be77f02582/15_FetchMate_UIKit.jpg",
+          "context": "Section 09 — UI Kit components"
+        },
+        {
+          "local": "fetchmate-type-color.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/bd5d10f2-7d70-4c45-8af9-b6f56b826abb/16_FetchMate_TypeColor.jpg",
+          "context": "Section 09 — Typography + color system"
+        },
+        {
+          "local": "fetchmate-user-testing.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/18b4c936-3e12-4b5c-bcc5-1a09714aa1ba/17_FetchMate_UserTesting.jpg",
+          "context": "Section 10 — User Testing findings"
+        },
+        {
+          "local": "fetchmate-course-certificate.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/cd251ad7-d349-4077-8f96-ab1b86f41524/course_certificate_Small.jpg",
+          "context": "Section 11 — Dribbble course completion certificate"
+        }
+      ]
+    },
+    "progressive-digital": {
+      "url": "https://johnvrhovnik.com/progressive-digital",
+      "images": [
+        {
+          "local": "progressive-digital-header.png",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/2061fc31-3daf-4cf2-9a09-d31fcb953d4f/DigitalAds_Header.png",
+          "context": "Hero header image"
+        },
+        {
+          "local": "progressive-digital-ad-pinterest-coffee.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/3c464ff5-302c-4805-aa96-35f614615a57/23D30150_PinterestAutoQ2_AQXCoffeeSteam.jpg",
+          "context": "Ad gallery — Pinterest Auto Q2 coffee steam"
+        },
+        {
+          "local": "progressive-digital-ad-facebook-alan-grilling.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/146442c5-93f6-4275-914f-7f48f264af92/21D30067_2021_Facebook_Q3_Ads_AlanGrilling.jpg",
+          "context": "Ad gallery — Facebook Q3 Alan Grilling"
+        },
+        {
+          "local": "progressive-digital-ad-pin-dualsport.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/279454e8-1dfe-4e21-a1a6-4e41022d7f34/20S80061_SL_Paid_Digital_Social_Ads_Pin_MCdualsport.jpg",
+          "context": "Ad gallery — Pinterest motorcycle dual sport"
+        },
+        {
+          "local": "progressive-digital-ad-barbie-dollbox.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/7c785034-edaf-49e0-a228-350048f3569c/23D30048_Barbie_DA_DollBox-300x600.jpg",
+          "context": "Ad gallery — Barbie display ad 300x600"
+        },
+        {
+          "local": "progressive-digital-ad-small-business.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/671f3b6f-7b1d-4774-ad8c-9006f836a167/SmallBusinessStatistics-01.jpg",
+          "context": "Ad gallery — Small Business Statistics"
+        },
+        {
+          "local": "progressive-digital-ad-soar-twitch.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/8aa09a68-63b3-4cc0-b9d8-bcc5584b2389/SoaR_TwitchPanelUnit_800x800.jpg",
+          "context": "Ad gallery — SoaR Twitch panel 800x800"
+        },
+        {
+          "local": "progressive-digital-ad-pin-boat.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/5ac7a5e3-48c0-4782-abfe-12d8bcd0e87d/Pin_BoatLastLonger-04.jpg",
+          "context": "Ad gallery — Pinterest boat insurance"
+        },
+        {
+          "local": "progressive-digital-ad-pin-mc-illustrated.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/0981c8df-07af-496f-ab8a-858c1ad62a96/21S80144_SL_2022_Digital_Pinterest_MCIllustrated.jpg",
+          "context": "Ad gallery — Pinterest MC illustrated"
+        },
+        {
+          "local": "progressive-digital-ad-pinterest-selfcare.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/68f647bf-9ea7-4c3a-8be9-9927739afa3a/21D30068_2021_Pinterest_Q3_Ads_SelfcareMara.jpg",
+          "context": "Ad gallery — Pinterest selfcare Mara"
+        },
+        {
+          "local": "progressive-digital-ad-xfl-floscore.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/5bb9e587-0e1d-4260-bdc0-7a076a062ac0/22D30168_XFL_DA_FloScore-728x90.jpg",
+          "context": "Ad gallery — XFL Flo Score display banner 728x90"
+        },
+        {
+          "local": "progressive-digital-ad-offroading-safety.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/f7ad1a01-fc2d-4df0-8a24-8b483b1e20e6/Pin_OffroadingSafety-02.jpg",
+          "context": "Ad gallery — Pinterest offroading safety"
+        },
+        {
+          "local": "progressive-digital-ad-apron-dogs.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/b87f9351-caf1-4f8a-a7d8-e3c1dec2eeea/22D30165_Pinterest_Q1_ApronDogs_Carousel_Tile1.jpg",
+          "context": "Ad gallery — Pinterest apron dogs carousel"
+        },
+        {
+          "local": "progressive-digital-ad-pinterest-dollhouse.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/05941b43-700e-44cf-aeda-6e64f6b4dd62/22D30055_Pinterest_Q3_Dollhouse.jpg",
+          "context": "Ad gallery — Pinterest Q3 Dollhouse"
+        },
+        {
+          "local": "progressive-digital-ad-immortals-gaming.jpg",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/c87741be-6350-4cd8-bc25-72e8459e2434/21D30178_2021_Immortals_Gaming_Club_OverlayT2.jpg",
+          "context": "Ad gallery — Immortals Gaming Club overlay"
+        },
+        {
+          "local": "progressive-digital-ad-flo-thumbsup.gif",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/f5ad60f9-46fe-4809-a986-84e9c3e404a0/QPRG1795000H_Flo_ThumbsUp_Giphy.gif",
+          "context": "Ad gallery — Flo thumbs up animated GIF"
+        },
+        {
+          "local": "progressive-digital-ad-flo-kekw.gif",
+          "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/5e7b591e-cf08-4398-8b78-bfe8d870ae22/QPRG1799000H_Flo_KEKW_Giphy.gif",
+          "context": "Ad gallery — Flo KEKW animated GIF"
+        }
+      ]
+    },
+    "branding": {
+      "url": "https://johnvrhovnik.com/branding",
+      "images": [
+        { "local": "branding-posture-poise.png", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617682243605-P2MKVE2E57ICFTDZ9V5L/BrandingLockups_PosturePoise.png", "context": "Branding grid — Posture Poise logo lockup" },
+        { "local": "branding-moto-club.png", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617682243060-GBEKLVTW0QFPMC5RK4G6/BrandingLockups_MotoClub.png", "context": "Branding grid — Moto Club logo lockup" },
+        { "local": "branding-matrix.png", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1692990777879-RN126JV9HXZ8L10GUKBV/Branding_Lockups_Matrix.png", "context": "Branding grid — Matrix logo lockup" },
+        { "local": "branding-pfd.png", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1728008016092-C3FLT59MKZ054NSW7PIW/Branding_Lockups_PFD.png", "context": "Branding grid — PFD logo lockup" },
+        { "local": "branding-brbnry.png", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617682241515-DQOUB0NN2QLT348SLDO8/BrandingLockups_BRBNRY.png", "context": "Branding grid — BRBNRY logo lockup" },
+        { "local": "branding-hackathon-23.png", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1685716447718-LH9OA87P4CSCVAQ49AR9/Branding_Lockups_Hackathon23.png", "context": "Branding grid — Hackathon 2023 logo" },
+        { "local": "branding-pinnacle.png", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617682243581-LSBFCDCNV17QSGR9DE43/BrandingLockups_Pinnacle.png", "context": "Branding grid — Pinnacle logo lockup" },
+        { "local": "branding-hackathon-22.png", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1654872420332-SDI1IVQ03YSBMZ50XB52/Branding_Lockups_Hackathon22.png", "context": "Branding grid — Hackathon 2022 logo" },
+        { "local": "branding-interactux.png", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617682243023-M7TH2ZHWAMJNKRPGP8PL/BrandingLockups_Interactux.png", "context": "Branding grid — InteracTUX logo lockup" },
+        { "local": "branding-ctl.png", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617682241990-8RG2FOOGQJJ43K8OD4KL/BrandingLockups_CTL.png", "context": "Branding grid — CTL logo lockup" },
+        { "local": "branding-dapponair.png", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617682242322-9EQE9667AUTUJTU2ZGRD/BrandingLockups_Dapponair.png", "context": "Branding grid — Dapponair logo lockup" },
+        { "local": "branding-aquadoc.png", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617682241514-6E0VFT92QERM4M40A1PY/BrandingLockups_AquaDoc.png", "context": "Branding grid — AquaDoc logo lockup" },
+        { "local": "branding-stuffd.png", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617682244078-QTE6N9LJ7WOS4GZI4SZF/BrandingLockups_Stuffd.png", "context": "Branding grid — Stuffd logo lockup" },
+        { "local": "branding-endnote.png", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617682242387-CWSQ6K1E3FNH001EEI43/BrandingLockups_Endnote.png", "context": "Branding grid — Endnote logo lockup" },
+        { "local": "branding-todd-thompson.png", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617682244077-3JSZGJTZRM6Z79GUG0TE/BrandingLockups_ToddThompson.png", "context": "Branding grid — Todd Thompson logo lockup" }
+      ]
+    },
+    "feed": {
+      "url": "https://johnvrhovnik.com/feed",
+      "images": [
+        { "local": "feed-sitemapper-cover.jpg", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/bf1b7a31-fceb-411a-95db-71c25127ac7d/SitemapperCover2.jpg", "context": "Feed card — Sitemapper Pro" },
+        { "local": "feed-pete-for-america-cover.jpg", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617682684097-WADI4JCYHMZXKUGF76S9/PFA_Cover.jpg", "context": "Feed card — Pete for America" },
+        { "local": "feed-experimental-type-cover.jpg", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617681215538-16Q87OI7C7EU5PIUKW1F/ExType_Cover.jpg", "context": "Feed card — Experimental Typography" }
+      ]
+    },
+    "sitemapper-pro": {
+      "url": "https://johnvrhovnik.com/sitemapper-pro",
+      "images": [
+        { "local": "sitemapper-cover.jpg", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/89c7c3da-8126-42f1-982c-33aab6a4ebb0/Sitemapper_Cover.jpg", "context": "Hero cover image" },
+        { "local": "sitemapper-example.jpg", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/4edee109-e952-4c34-8224-d99247300829/Example.jpg", "context": "Gallery — Example site map" },
+        { "local": "sitemapper-pages.jpg", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/3eef2d05-99e4-409d-902c-2c532f0c965b/Pages.jpg", "context": "Gallery — Pages component" },
+        { "local": "sitemapper-content-blocks.jpg", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/5d47a8aa-790e-4b6b-9d98-8fb5367b0bbe/Content+Blocks.jpg", "context": "Gallery — Content Blocks component" },
+        { "local": "sitemapper-pro-overview.jpg", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/13301847-2ab9-4d70-b43c-11ec217632c4/Sitemapper+Pro.jpg", "context": "Gallery — Sitemapper Pro full overview" }
+      ]
+    },
+    "pete-for-america": {
+      "url": "https://johnvrhovnik.com/pete-for-america",
+      "images": [
+        { "local": "pete-for-america-hero-01.jpg", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617683971533-WVPXB7YHZBSWN7R5JMCH/PFA_01.jpg", "context": "Hero image 01 — placard collection spread" },
+        { "local": "pete-for-america-colorado.png", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617683622296-7HYL3BDU73NMKBKZ7JZH/PeteForAmerica_Colorado.png", "context": "State placard — Colorado" },
+        { "local": "pete-for-america-new-york.png", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617683624627-HIJ3EJT4M9GZSVVC7JW7/PeteForAmerica_NewYork.png", "context": "State placard — New York" },
+        { "local": "pete-for-america-maryland.png", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617683625231-M7KRLZMVMSYLJ9MDBFXX/PeteForAmerica_Maryland.png", "context": "State placard — Maryland" },
+        { "local": "pete-for-america-north-carolina.png", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617683623327-EFAQHHE9MK78HLX430E7/PeteForAmerica_NorthCarolina.png", "context": "State placard — North Carolina" },
+        { "local": "pete-for-america-washington.png", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617683623460-B0ZNIT4O01WFP7ESZ6GA/PeteForAmerica_Washington.png", "context": "State placard — Washington" },
+        { "local": "pete-for-america-northern-mariana-islands.png", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617683622833-WXV738EBLJEQIHRN6ML8/PeteForAmerica_NorthernMarianaIslands.png", "context": "Territory placard — Northern Mariana Islands" },
+        { "local": "pete-for-america-kentucky.png", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617683625774-TTSGUPLR6P1D9C07MNWE/PeteForAmerica_Kentucky.png", "context": "State placard — Kentucky" },
+        { "local": "pete-for-america-arizona.png", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617683626298-UP8DIE589TY7EMAMX3BC/PeteForAmerica_Arizona.png", "context": "State placard — Arizona" },
+        { "local": "pete-for-america-hero-02.jpg", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617684032293-AQWV7RPZA3GB5ZO6JJQI/PFA_02.jpg", "context": "Hero image 02 — detail spread" },
+        { "local": "pete-for-america-american-samoa.png", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617683622931-0RAKA4E0BREPFTBOBAKT/PeteForAmerica_AmericanSamoa.png", "context": "Territory placard — American Samoa" },
+        { "local": "pete-for-america-new-jersey.png", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617683625082-ASKDEHDVVIVZGXIIGAYZ/PeteForAmerica_NewJersey.png", "context": "State placard — New Jersey" },
+        { "local": "pete-for-america-virginia.png", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617683624085-RV5RSOL0GQK1MSILDEXJ/PeteForAmerica_Virginia.png", "context": "State placard — Virginia" },
+        { "local": "pete-for-america-south-dakota.png", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617683624221-C3UFEVD3JTT3ONGEOEU1/PeteForAmerica_SouthDakota.png", "context": "State placard — South Dakota" },
+        { "local": "pete-for-america-maine.png", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617683625678-NMD0NWTNXT69SA2E1Y1D/PeteForAmerica_Maine.png", "context": "State placard — Maine" },
+        { "local": "pete-for-america-puerto-rico.png", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617683622252-6HXIHTNB4C9ESP43TDG7/PeteForAmerica_PuertoRico.png", "context": "Territory placard — Puerto Rico" }
+      ]
+    },
+    "experimental-typography": {
+      "url": "https://johnvrhovnik.com/experimental-typography",
+      "images": [
+        { "local": "experimental-type-01.jpg", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617685351130-Z37WHDLIS9EG7M6GWWJX/ExperimentalType_01.jpg", "context": "Typography poster 01" },
+        { "local": "experimental-type-02.jpg", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617685357274-R6SI89VGRX5DO8LRA5AA/ExperimentalType_02.jpg", "context": "Typography poster 02" },
+        { "local": "experimental-type-03.jpg", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617685357113-G463L2JQNIHOZFVU5W6E/ExperimentalType_03.jpg", "context": "Typography poster 03" },
+        { "local": "experimental-type-04.jpg", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617685356700-2RDIE75SYM6CIU9HR7YR/ExperimentalType_04.jpg", "context": "Typography poster 04" },
+        { "local": "experimental-type-05.jpg", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617685356589-421A7K0HTZXYK7WBL597/ExperimentalType_05.jpg", "context": "Typography poster 05" },
+        { "local": "experimental-type-06.jpg", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617685356147-W29YQF548ENCBLLMYHES/ExperimentalType_06.jpg", "context": "Typography poster 06" },
+        { "local": "experimental-type-07.jpg", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617685721926-J0WYY38EU99XAAN89ATM/ExperimentalType_07.jpg", "context": "Typography poster 07" },
+        { "local": "experimental-type-08.jpg", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617685355601-3N0XKP33ZNQYSWL0RY8T/ExperimentalType_08.jpg", "context": "Typography poster 08" },
+        { "local": "experimental-type-09.jpg", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617685355237-S7PAR7HJMWTSLQIW8D82/ExperimentalType_09.jpg", "context": "Typography poster 09" },
+        { "local": "experimental-type-10.jpg", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617685355056-ONTLH3C6PX79B19TSVZN/ExperimentalType_10.jpg", "context": "Typography poster 10" },
+        { "local": "experimental-type-11.jpg", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617685354726-TJ25C56007U1CGFRH3MV/ExperimentalType_11.jpg", "context": "Typography poster 11" },
+        { "local": "experimental-type-12.jpg", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617685353985-5ATDVGKKLOGLBA5NWCYS/ExperimentalType_12.jpg", "context": "Typography poster 12" },
+        { "local": "experimental-type-13.jpg", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617685353926-F3LXM7J7GPWTGND4FM3S/ExperimentalType_13.jpg", "context": "Typography poster 13" },
+        { "local": "experimental-type-14.jpg", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617685353181-X8RKG3ZO1JHC6EQUCBH6/ExperimentalType_14.jpg", "context": "Typography poster 14" },
+        { "local": "experimental-type-15.jpg", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617685352936-AFV0PR2FTOYM41WH5CSG/ExperimentalType_15.jpg", "context": "Typography poster 15" },
+        { "local": "experimental-type-16.jpg", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617685352216-QX2PDEUJA01B2P67WT9C/ExperimentalType_16.jpg", "context": "Typography poster 16" },
+        { "local": "experimental-type-17.jpg", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617685352210-JHUIRB32C66A0UKVP4KD/ExperimentalType_17.jpg", "context": "Typography poster 17" },
+        { "local": "experimental-type-18.jpg", "original": "https://images.squarespace-cdn.com/content/v1/56a2a2a305caa79cb07dcce2/1617685351126-BJY91XPGDMZ1JTJFBJO1/ExperimentalType_18.jpg", "context": "Typography poster 18" }
+      ]
+    }
+  }
+}

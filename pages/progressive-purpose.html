@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Progressive Purpose — John Vrhovnik</title>
+  <meta name="description" content="A UX case study redesigning the Progressive Purpose web experience — site mapping, prototyping, Figma tokens, and developer collaboration." />
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="Progressive Purpose — John Vrhovnik" />
+  <meta property="og:description" content="UX case study: redesigning the Progressive Purpose web experience." />
+  <meta property="og:image"       content="https://johnvrhovnik.com/images/progressive-purpose-hero.jpg" />
+  <meta property="og:url"         content="https://johnvrhovnik.com/progressive-purpose" />
+  <meta property="og:type"        content="website" />
+
+  <link rel="canonical" href="https://johnvrhovnik.com/progressive-purpose" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/favicons/apple-touch-icon.png">
+  <link rel="mask-icon" href="../images/favicons/safari-pinned-tab.svg" color="#0000ff">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- NAV -->
+  <nav class="nav" aria-label="Site navigation">
+    <a href="../index.html" class="nav-logo" aria-label="John Vrhovnik — Home">JV–</a>
+
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-drawer">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" role="list">
+      <li><a href="progressive-purpose.html" class="nav-link is-active">01 /</a></li>
+      <li><a href="fetchmate.html"           class="nav-link">02 /</a></li>
+      <li><a href="progressive-digital.html" class="nav-link">03 /</a></li>
+      <li><a href="etcetera.html"                class="nav-link">Etc.</a></li>
+    </ul>
+  </nav>
+
+  <nav id="nav-drawer" class="nav-drawer" aria-label="Mobile navigation">
+    <a href="progressive-purpose.html" class="nav-link is-active">01 /</a>
+    <a href="fetchmate.html"           class="nav-link">02 /</a>
+    <a href="progressive-digital.html" class="nav-link">03 /</a>
+    <a href="etcetera.html"                class="nav-link">Etc.</a>
+  </nav>
+
+  <main id="main" class="page-body">
+
+    <h1 class="case-study-title container" style="padding-top: var(--space-3xl);">Progressive Purpose</h1>
+
+    <div class="container">
+      <div class="grid">
+
+        <!-- Hero video — full width -->
+        <div class="col-12" style="margin-bottom: var(--space-xl);">
+          <div class="site-video">
+            <video
+              src="../video/progressive-purpose-mockup-video.mp4"
+              autoplay
+              loop
+              muted
+              playsinline
+              disablepictureinpicture
+            ></video>
+          </div>
+        </div>
+
+        <!-- Description -->
+        <p class="col-12 col-lg-8" style="font-size: var(--font-size-largebody); line-height: var(--line-height-normal);">
+          A case study on the design process used to create a dynamic web experience for Progressive's purpose statement and the stories that support it.
+        </p>
+
+        <!-- Roles -->
+        <p class="col-12 col-lg-8" style="font-size: var(--font-size-body); line-height: var(--line-height-normal);">
+          ROLES /&ensp;Site mapping, prototyping, building tokens and components within Figma, partnering with developers
+        </p>
+
+        <!-- Impact -->
+        <p class="col-12 col-lg-8" style="font-size: var(--font-size-body); line-height: var(--line-height-normal);">
+          IMPACT /&ensp;Successfully designed and launched a site extension by creating a scalable UI kit and collaborating closely with developers to ensure seamless translation from design to code
+        </p>
+
+        <!-- Live site link -->
+        <div class="col-12 col-lg-8">
+          <a class="arrow-link" href="https://www.progressive.com/about/purpose/" target="_blank" rel="noopener noreferrer">Visit live site ↗</a>
+        </div>
+
+      </div>
+
+      <hr style="border: none; border-top: var(--border-rule); margin-top: var(--space-3xl);">
+    </div>
+
+    <!-- 01 / Brief -->
+    <div class="container" style="padding-top: var(--space-3xl);">
+      <div class="grid">
+
+        <h2 class="cs-section__title col-12">01 /&ensp;Brief</h2>
+
+        <p class="col-12 col-lg-8" style="font-size: var(--font-size-body); line-height: var(--line-height-loose);">
+          Progressive has had an incredible history of helping people, but had yet to compile all the great stories into one single destination. The goal of the Purpose site is to create a unique experience to share all these stories through captivating imagery, video and written text. The experience needed to be housed on the main Progressive brand website, but present itself with a distinctive visual identity that stands out on its own.
+        </p>
+
+        <div class="col-12 col-lg-8">
+          <img
+            src="../images/progressive-purpose-hero.jpg"
+            alt="Progressive Purpose — hero"
+            width="1710"
+            height="960"
+            loading="lazy"
+          />
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 02 / Site Map -->
+    <div class="container" style="padding-top: var(--space-4xl);">
+      <div class="grid">
+
+        <h2 class="cs-section__title col-12">02 /&ensp;Site Map</h2>
+
+        <p class="col-12 col-lg-8" style="font-size: var(--font-size-body); line-height: var(--line-height-loose);">
+          Many new pages needed to be created to house the various content on the existing website. Some of these pages included the homepage, campaign pages, program pages and stories. Most of these designs would serve as templates for repeated content.
+        </p>
+
+        <div class="col-12 col-lg-7">
+          <img
+            src="../images/progressive-purpose-sitemap.jpg"
+            alt="Progressive Purpose — site map"
+            width="1200"
+            height="800"
+            loading="lazy"
+          />
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 03 / Iteration -->
+    <div class="container" style="padding-top: var(--space-4xl);">
+      <div class="grid">
+
+        <h2 class="cs-section__title col-12">03 /&ensp;Iteration</h2>
+
+        <p class="col-12 col-lg-8" style="font-size: var(--font-size-body); line-height: var(--line-height-loose);">
+          Since the Purpose site was being built into an existing platform, content modules within the prototypes needed to be derived from what already existed in the pattern library, but would later be modified to meet the needs of the Purpose brand. Early iterations followed existing module patterns and wireframing was bypassed because of this.
+        </p>
+
+        <div class="col-12">
+          <img
+            src="../images/progressive-purpose-iteration.jpg"
+            alt="Progressive Purpose — design iteration"
+            width="1200"
+            height="900"
+            loading="lazy"
+          />
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 04 / Visual Identity -->
+    <div class="container" style="padding-top: var(--space-4xl);">
+      <div class="grid">
+
+        <h2 class="cs-section__title col-12">04 /&ensp;Visual Identity</h2>
+
+        <p class="col-12 col-lg-8" style="font-size: var(--font-size-body); line-height: var(--line-height-loose);">
+          To drive the identity of the site, a set of guiding principles were defined prior to design. These guiding principles were: show authentic humanity, be unapologetically bold, convey powerful expression, move from transactional to engaging, and use copy to convey action. These principles became the backbone to all design, photography and written language within the experience.
+        </p>
+
+        <img
+          class="col-12 col-lg-8"
+          src="../images/progressive-purpose-visual-identity-01.jpg"
+          alt="Progressive Purpose — visual identity 1"
+          width="960"
+          height="720"
+          loading="lazy"
+        />
+
+        <img
+          class="col-12 col-lg-4"
+          src="../images/progressive-purpose-visual-identity-02.jpg"
+          alt="Progressive Purpose — visual identity 2"
+          width="480"
+          height="720"
+          loading="lazy"
+        />
+
+        <p class="col-12" style="font-size: var(--font-size-body); line-height: var(--line-height-loose);">
+          Black full bleed modules and a bold and expanded all-caps font as well as candid in-action photography were used to convey these principles and stand out from the rest of the pages on the site.
+        </p>
+
+        <img
+          class="col-12"
+          src="../images/progressive-purpose-visual-identity-03.jpg"
+          alt="Progressive Purpose — visual identity 3"
+          width="1200"
+          height="675"
+          loading="lazy"
+        />
+
+        <img
+          class="col-12"
+          src="../images/progressive-purpose-visual-identity-04.jpg"
+          alt="Progressive Purpose — visual identity 4"
+          width="1200"
+          height="675"
+          loading="lazy"
+        />
+
+      </div>
+    </div>
+
+    <!-- 05 / UI Kit -->
+    <div class="container" style="padding-top: var(--space-4xl);">
+      <div class="grid">
+
+        <h2 class="cs-section__title col-12">05 /&ensp;UI Kit</h2>
+
+        <p class="col-12 col-lg-8" style="font-size: var(--font-size-body); line-height: var(--line-height-loose);">
+          I was tasked with creating a UI kit in Figma to enforce consistency among the components being used in the prototype, which showed the relationships between mobile and desktop components as well as component variants. This also became the source for developers to base their code.
+        </p>
+
+        <h3 class="col-12" style="font-size: var(--font-size-h3); font-weight: var(--font-weight-base); letter-spacing: var(--letter-spacing-tight); text-transform: uppercase; line-height: var(--line-height-tight); margin-top: var(--space-2xl);">Article Tiles</h3>
+
+        <div class="col-12 col-lg-6">
+          <img
+            src="../images/progressive-purpose-uikit-04.png"
+            alt="Progressive Purpose UI kit — article tile 1"
+            width="600"
+            height="450"
+            loading="lazy"
+          />
+        </div>
+
+      </div>
+
+      <div class="grid" style="margin-top: var(--grid-row-gap);">
+        <div class="col-5 col-lg-2">
+          <img
+            src="../images/progressive-purpose-uikit-02.png"
+            alt="Progressive Purpose UI kit — article tile 2"
+            width="600"
+            height="450"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="grid" style="margin-top: var(--grid-row-gap);">
+        <h3 class="col-12" style="font-size: var(--font-size-h3); font-weight: var(--font-weight-base); letter-spacing: var(--letter-spacing-tight); text-transform: uppercase; line-height: var(--line-height-tight); margin-top: var(--space-2xl);">Call to Action</h3>
+
+        <div class="col-12 col-lg-6">
+          <img
+            src="../images/progressive-purpose-uikit-05.png"
+            alt="Progressive Purpose UI kit — call to action 1"
+            width="1160"
+            height="640"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="grid" style="margin-top: var(--grid-row-gap);">
+        <div class="col-12 col-lg-6">
+          <img
+            src="../images/progressive-purpose-uikit-03.png"
+            alt="Progressive Purpose UI kit — call to action 2"
+            width="964"
+            height="342"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="grid" style="margin-top: var(--grid-row-gap);">
+        <h3 class="col-12" style="font-size: var(--font-size-h3); font-weight: var(--font-weight-base); letter-spacing: var(--letter-spacing-tight); text-transform: uppercase; line-height: var(--line-height-tight); margin-top: var(--space-2xl);">Content Modules</h3>
+
+        <div class="col-12 col-lg-7">
+          <img
+            src="../images/progressive-purpose-uikit-08.png"
+            alt="Progressive Purpose UI kit — content module 1"
+            width="1440"
+            height="426"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="grid" style="margin-top: var(--grid-row-gap);">
+        <div class="col-12 col-lg-7">
+          <img
+            src="../images/progressive-purpose-uikit-07.png"
+            alt="Progressive Purpose UI kit — content module 2"
+            width="1440"
+            height="310"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="grid" style="margin-top: var(--grid-row-gap);">
+        <div class="col-12 col-lg-7">
+          <img
+            src="../images/progressive-purpose-uikit-09.png"
+            alt="Progressive Purpose UI kit — content module 3"
+            width="1440"
+            height="393"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="grid" style="margin-top: var(--grid-row-gap);">
+        <h3 class="col-12" style="font-size: var(--font-size-h3); font-weight: var(--font-weight-base); letter-spacing: var(--letter-spacing-tight); text-transform: uppercase; line-height: var(--line-height-tight); margin-top: var(--space-2xl);">Article Header</h3>
+
+        <div class="col-12 col-lg-7">
+          <img
+            src="../images/progressive-purpose-uikit-06.png"
+            alt="Progressive Purpose UI kit — article header"
+            width="1440"
+            height="751"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="grid" style="margin-top: var(--grid-row-gap);">
+        <h3 class="col-12" style="font-size: var(--font-size-h3); font-weight: var(--font-weight-base); letter-spacing: var(--letter-spacing-tight); text-transform: uppercase; line-height: var(--line-height-tight); margin-top: var(--space-2xl);">Campaign Tiles</h3>
+
+        <div class="col-12 col-lg-6">
+          <img
+            src="../images/progressive-purpose-uikit-01.png"
+            alt="Progressive Purpose UI kit — campaign tile"
+            width="1350"
+            height="754"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer class="site-footer container">
+    <div class="site-footer__inner">
+      <span class="site-footer__copy">© 2026 John Vrhovnik</span>
+      <a href="mailto:johnvrhovnik@gmail.com" class="arrow-link">johnvrhovnik@gmail.com ↗</a>
+    </div>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fetchmate — John Vrhovnik</title>
+  <meta name="description" content="A comprehensive case study documenting the entire product design process for a pet care app, through Dribbble's certified 16-Week Product Design Course." />
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="Fetchmate — John Vrhovnik" />
+  <meta property="og:description" content="Product design case study: Fetchmate pet care app, Dribbble 16-Week Certified Course." />
+  <meta property="og:image"       content="https://johnvrhovnik.com/images/fetchmate-hero-feature.png" />
+  <meta property="og:url"         content="https://johnvrhovnik.com/fetchmate" />
+  <meta property="og:type"        content="website" />
+
+  <link rel="canonical" href="https://johnvrhovnik.com/fetchmate" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/favicons/apple-touch-icon.png">
+  <link rel="mask-icon" href="../images/favicons/safari-pinned-tab.svg" color="#0000ff">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- NAV -->
+  <nav class="nav" aria-label="Site navigation">
+    <a href="../index.html" class="nav-logo" aria-label="John Vrhovnik — Home">JV–</a>
+
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-drawer">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" role="list">
+      <li><a href="progressive-purpose.html" class="nav-link">01 /</a></li>
+      <li><a href="fetchmate.html"           class="nav-link is-active">02 /</a></li>
+      <li><a href="progressive-digital.html" class="nav-link">03 /</a></li>
+      <li><a href="etcetera.html"                class="nav-link">Etc.</a></li>
+    </ul>
+  </nav>
+
+  <nav id="nav-drawer" class="nav-drawer" aria-label="Mobile navigation">
+    <a href="progressive-purpose.html" class="nav-link">01 /</a>
+    <a href="fetchmate.html"           class="nav-link is-active">02 /</a>
+    <a href="progressive-digital.html" class="nav-link">03 /</a>
+    <a href="etcetera.html"                class="nav-link">Etc.</a>
+  </nav>
+
+  <main id="main" class="page-body">
+
+    <h1 class="case-study-title container" style="padding-top: var(--space-3xl);">Fetchmate</h1>
+
+    <div class="container">
+      <div class="grid">
+
+        <!-- Hero image — full width -->
+        <div class="col-12 col-lg-10-center" style="margin-bottom: var(--space-xl);">
+          <img
+            src="../images/fetchmate-hero-feature.png"
+            alt="Fetchmate — hero feature"
+            width="1710"
+            height="960"
+            loading="eager"
+          />
+        </div>
+
+        <!-- Description -->
+        <p class="col-12 col-lg-8" style="font-size: var(--font-size-largebody); line-height: var(--line-height-normal);">
+          A comprehensive case study documenting the entire product design process for a pet care app, through Dribbble's certified 16-Week Product Design Course.
+        </p>
+
+        <!-- Timeline -->
+        <p class="col-12 col-lg-8" style="font-size: var(--font-size-body); line-height: var(--line-height-normal);">
+          TIMELINE /&ensp;3 months
+        </p>
+
+        <!-- Tools -->
+        <p class="col-12 col-lg-8" style="font-size: var(--font-size-body); line-height: var(--line-height-normal);">
+          TOOLS /&ensp;Figma, Figjam, AI
+        </p>
+
+        <!-- Results -->
+        <p class="col-12 col-lg-8" style="font-size: var(--font-size-body); line-height: var(--line-height-normal);">
+          RESULTS /&ensp;Successful development of a fully functioning product prototype
+        </p>
+
+        <!-- Course certification -->
+        <p class="col-12 col-lg-8" style="font-size: var(--font-size-body); line-height: var(--line-height-normal);">
+          COURSE CERTIFICATION /&ensp;Completed
+        </p>
+
+      </div>
+
+      <div class="grid" style="margin-top: var(--space-2xl);">
+
+        <!-- Prototype video — col 1–7 desktop, full width mobile -->
+        <div class="col-12 col-lg-7">
+          <div class="site-video">
+            <video
+              src="../video/fetchmate-prototype-video.mp4"
+              autoplay
+              loop
+              muted
+              playsinline
+              disablepictureinpicture
+            ></video>
+          </div>
+        </div>
+
+        <!-- Prototype mockup — col 8–12 desktop (5 cols), full width mobile -->
+        <div class="col-12 col-lg-5">
+          <img
+            src="../images/fetchmate-prototype-mockup.jpg"
+            alt="Fetchmate — prototype mockup"
+            width="1400"
+            height="1400"
+            loading="lazy"
+          />
+        </div>
+
+      </div>
+
+      <hr style="border: none; border-top: var(--border-rule); margin-top: var(--space-3xl);">
+    </div>
+
+    <!-- 01 / Problem Statement -->
+    <div class="container" style="padding-top: var(--space-3xl);">
+      <div class="grid">
+
+        <h2 class="cs-section__title col-12">01 /&ensp;Problem Statement</h2>
+
+        <p class="col-12 col-lg-8" style="font-size: var(--font-size-body); line-height: var(--line-height-loose);">
+          For this project, the goal was to create an app that connects dog owners with dog walkers and facilitate a seamless experience for users to book this type of service. The project included conducting research, building a user persona, wireframing and user testing as well as building a UI kit, brand and a fully functioning prototype.
+        </p>
+
+      </div>
+    </div>
+
+    <!-- 02 / Market Research -->
+    <div class="container" style="padding-top: var(--space-4xl);">
+      <div class="grid">
+
+        <h2 class="cs-section__title col-12">02 /&ensp;Market Research</h2>
+
+        <p class="col-12 col-lg-8" style="font-size: var(--font-size-body); line-height: var(--line-height-loose);">
+          After conducting thorough market research, I was able to define the existing products and services on the market and conclude what features were not available to users in these products. These products provide similar services like booking with walkers in your area, finding trusted and reviewed caretakers as well as communication between you and your chosen caretaker.
+        </p>
+
+        <p class="col-12 col-lg-8" style="font-size: var(--font-size-body); line-height: var(--line-height-normal);">
+          ROVER /&ensp;Offers multiple services in addition to dog walks, but has a somewhat strenuous user flow
+        </p>
+
+        <p class="col-12 col-lg-8" style="font-size: var(--font-size-body); line-height: var(--line-height-normal);">
+          WAG! /&ensp;Can be used to easily book dog walkers, but does not include services for other types of pets besides dogs
+        </p>
+
+        <p class="col-12 col-lg-8" style="font-size: var(--font-size-body); line-height: var(--line-height-normal);">
+          WALKIES /&ensp;This product is focused on managing your dog walking small business and does not include a seamless dog owner user experience
+        </p>
+
+        <p class="col-12 col-lg-8" style="font-size: var(--font-size-body); line-height: var(--line-height-normal);">
+          LOCAL KENNELS /&ensp;Convenient and available option but don't offer walking services and often aren't the most safe or healthy conditions
+        </p>
+
+        <div class="col-12">
+          <img
+            src="../images/fetchmate-market-research.jpg"
+            alt="Fetchmate — market research"
+            width="1710"
+            height="960"
+            loading="lazy"
+          />
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 03 / User Research -->
+    <div class="container" style="padding-top: var(--space-4xl);">
+      <div class="grid">
+
+        <h2 class="cs-section__title col-12">03 /&ensp;User Research</h2>
+
+        <p class="col-12 col-lg-8" style="font-size: var(--font-size-body); line-height: var(--line-height-loose);">
+          The ideal users needed to be dog owners who routinely seek walking or petsitting services. After interviewing a group between the ages of 30 and 64, I determined what was most important to the user. I concluded that most users were most concerned about the health and safety of their pets and were willing to put cost aside knowing they were getting quality care. I also established that having a clear and effective line of communication between the owner and caretaker is essential.
+        </p>
+
+        <div class="col-12">
+          <img
+            src="../images/fetchmate-user-research-quote.jpg"
+            alt="Fetchmate — user research"
+            width="1710"
+            height="960"
+            loading="lazy"
+          />
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 04 / User Persona -->
+    <div class="container" style="padding-top: var(--space-4xl);">
+      <div class="grid">
+
+        <h2 class="cs-section__title col-12">04 /&ensp;User Persona</h2>
+
+        <p class="col-12 col-lg-8" style="font-size: var(--font-size-body); line-height: var(--line-height-loose);">
+          From here I was able to determine who my ideal user would be. I developed a user persona to define who the product would be for and made sure I was still appealing to this user at every checkpoint along the way.
+        </p>
+
+        <div class="col-12 col-lg-10">
+          <img
+            src="../images/fetchmate-user-persona.jpg"
+            alt="Fetchmate — user persona"
+            width="1710"
+            height="960"
+            loading="lazy"
+          />
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 05 / User Flow -->
+    <div class="container" style="padding-top: var(--space-4xl);">
+      <div class="grid">
+
+        <h2 class="cs-section__title col-12">05 /&ensp;User Flow</h2>
+
+        <p class="col-12 col-lg-8" style="font-size: var(--font-size-body); line-height: var(--line-height-loose);">
+          Before building any screens, I built a thorough user flow starting from the top at the main login screen all the way through to the final booking flow, making adjustments as the project progressed.
+        </p>
+
+        <div class="col-12">
+          <img
+            src="../images/fetchmate-user-flow.jpg"
+            alt="Fetchmate — user flow"
+            width="1710"
+            height="960"
+            loading="lazy"
+          />
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 06 / Wireframe -->
+    <div class="container" style="padding-top: var(--space-4xl);">
+      <div class="grid">
+
+        <h2 class="cs-section__title col-12">06 /&ensp;Wireframe</h2>
+
+        <p class="col-12 col-lg-8" style="font-size: var(--font-size-body); line-height: var(--line-height-loose);">
+          Starting with some basic sketches, I got a sense of how some of my screens could be laid out. I then created some low fidelity wireframes around the user flow I previously built, including a main dashboard for users to start their experience from. I focused my design needs around the information I uncovered in the market and user research phases which included emphasis on communication and messaging, reviews and ratings of hosts as well as including services like pet sitting and more in addition to dog walking.
+        </p>
+
+        <div class="col-12 col-lg-6">
+          <img
+            src="../images/fetchmate-wireframe-sketches.jpg"
+            alt="Fetchmate — wireframe sketches"
+            width="1710"
+            height="960"
+            loading="lazy"
+          />
+        </div>
+
+      </div>
+
+      <div class="grid" style="margin-top: var(--grid-row-gap);">
+
+        <div class="col-12 col-lg-9-right">
+          <img
+            src="../images/fetchmate-wireframes.jpg"
+            alt="Fetchmate — wireframes"
+            width="1710"
+            height="960"
+            loading="lazy"
+          />
+        </div>
+
+      </div>
+
+      <div class="grid" style="margin-top: var(--grid-row-gap);">
+
+        <p class="col-12 col-lg-8" style="font-size: var(--font-size-body); line-height: var(--line-height-loose);">
+          Below is an iterative representation of my design process in creating the main dashboard—from low fidelity wireframe to the finished product.
+        </p>
+
+        <div class="col-12">
+          <img
+            src="../images/fetchmate-iteration.jpg"
+            alt="Fetchmate — design iteration"
+            width="1710"
+            height="960"
+            loading="lazy"
+          />
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 07 / Visual Design -->
+    <div class="container" style="padding-top: var(--space-4xl);">
+      <div class="grid">
+
+        <h2 class="cs-section__title col-12">07 /&ensp;Visual Design</h2>
+
+        <p class="col-12 col-lg-8" style="font-size: var(--font-size-body); line-height: var(--line-height-loose);">
+          From here I was able to complete the final prototypes of all the screens needed to get my users through the proposed flows. This was achieved by using a grid system and following a detailed design theme throughout while making iterations to the design informed through user testing.
+        </p>
+
+        <div class="col-12">
+          <img
+            src="../images/fetchmate-home-screens.jpg"
+            alt="Fetchmate — home screens"
+            width="1710"
+            height="960"
+            loading="lazy"
+          />
+        </div>
+
+      </div>
+
+      <div class="grid" style="margin-top: var(--grid-row-gap);">
+        <div class="col-12">
+          <img
+            src="../images/fetchmate-walker-search.jpg"
+            alt="Fetchmate — walker search"
+            width="1710"
+            height="960"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="grid" style="margin-top: var(--grid-row-gap);">
+        <div class="col-12">
+          <img
+            src="../images/fetchmate-confirmation.jpg"
+            alt="Fetchmate — confirmation"
+            width="1710"
+            height="960"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="grid" style="margin-top: var(--grid-row-gap);">
+        <div class="col-12">
+          <img
+            src="../images/fetchmate-screen-collage.jpg"
+            alt="Fetchmate — screen collage"
+            width="1710"
+            height="960"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 08 / Branding -->
+    <div class="container" style="padding-top: var(--space-4xl);">
+      <div class="grid">
+
+        <h2 class="cs-section__title col-12">08 /&ensp;Branding</h2>
+
+        <p class="col-12 col-lg-8" style="font-size: var(--font-size-body); line-height: var(--line-height-loose);">
+          Prior to the design process, I included a thorough investigation of the visual design theme I wanted to bring to the app. I created a few moodboards before landing on a concept, and from there designed a logo with a full color palette to integrate into my product. I wanted the brand to feel bright and playful, so I focused on a color palette and typography to emphasize that.
+        </p>
+
+        <div class="col-12 col-lg-6">
+          <img
+            src="../images/fetchmate-moodboard.jpg"
+            alt="Fetchmate — moodboard"
+            width="1710"
+            height="960"
+            loading="lazy"
+          />
+        </div>
+
+      </div>
+
+      <div class="grid" style="margin-top: var(--grid-row-gap);">
+        <div class="col-12 col-lg-9-right">
+          <img
+            src="../images/fetchmate-branding.jpg"
+            alt="Fetchmate — branding"
+            width="1710"
+            height="960"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 09 / UI Kit -->
+    <div class="container" style="padding-top: var(--space-4xl);">
+      <div class="grid">
+
+        <h2 class="cs-section__title col-12">09 /&ensp;UI Kit</h2>
+
+        <p class="col-12 col-lg-8" style="font-size: var(--font-size-body); line-height: var(--line-height-loose);">
+          As I was building the various screens, I was simultaneously creating a UI kit that allows for reuse of common components and interactions within the app. This includes buttons, fields, navigation, cards and more. I included a system for keeping typography consistent by developing text styles for headings and body copy. With an emphasis on WCAG accessibility standards, I also was sure to include a detailed breakdown of the entire color palette including all color pairings and their respective color contrast ratios and ratings.
+        </p>
+
+        <div class="col-12">
+          <img
+            src="../images/fetchmate-uikit.jpg"
+            alt="Fetchmate — UI kit"
+            width="1710"
+            height="960"
+            loading="lazy"
+          />
+        </div>
+
+      </div>
+
+      <div class="grid" style="margin-top: var(--grid-row-gap);">
+        <div class="col-12">
+          <img
+            src="../images/fetchmate-type-color.jpg"
+            alt="Fetchmate — typography and color"
+            width="1710"
+            height="960"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 10 / User Testing -->
+    <div class="container" style="padding-top: var(--space-4xl);">
+      <div class="grid">
+
+        <h2 class="cs-section__title col-12">10 /&ensp;User Testing</h2>
+
+        <p class="col-12 col-lg-8" style="font-size: var(--font-size-body); line-height: var(--line-height-loose);">
+          Throughout the design process, I was constantly testing the prototypes with a group of users and iterating on their problems faced. This allowed me to spot key issues in my design and revise based on these issues. In early prototypes, search priority was based on the walker, and not the time and day. Users had difficulty finding a desired time and day, having to constantly flip between walkers to find an ideal booking. To resolve this, I reordered the search flow so calendar came first and the available walkers filtered from there.
+        </p>
+
+        <div class="col-12 col-lg-10">
+          <img
+            src="../images/fetchmate-user-testing.jpg"
+            alt="Fetchmate — user testing"
+            width="1710"
+            height="960"
+            loading="lazy"
+          />
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 11 / Final Product -->
+    <div class="container" style="padding-top: var(--space-4xl);">
+      <div class="grid">
+
+        <h2 class="cs-section__title col-12">11 /&ensp;Final Product</h2>
+
+        <p class="col-12 col-lg-8" style="font-size: var(--font-size-body); line-height: var(--line-height-loose);">
+          From here I was able to complete the final prototype of my product and confirm its success. After meeting all of my goals, my key learnings from the project included a deep dive into the market and user research process to build an ideal user persona as well as a dynamic user flow. I also learned how to thoroughly manage a design system using the tools provided in Figma and how to iterate my design based on feedback gathered from user testing.
+        </p>
+
+        <div class="col-10-center col-lg-6" style="margin-top: var(--space-3xl);">
+          <img
+            src="../images/fetchmate-course-certificate.jpg"
+            alt="Fetchmate — course certificate"
+            width="1710"
+            height="960"
+            loading="lazy"
+          />
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer container">
+    <div class="site-footer__inner">
+      <span class="site-footer__copy">© 2026 John Vrhovnik</span>
+      <a href="mailto:johnvrhovnik@gmail.com" class="arrow-link">johnvrhovnik@gmail.com ↗</a>
+    </div>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>
