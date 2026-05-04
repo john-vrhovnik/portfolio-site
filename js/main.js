@@ -104,6 +104,10 @@
     // Also handle root-relative and GitHub Pages paths
     const normalised = path.replace(/^\/[^/]+\/pages\//, '/pages/');
     const activeKey  = normalised.split('/').pop(); // filename
+
+    // Empty string (path "/") or "index.html" means home — no active item
+    if (!activeKey || activeKey === 'index.html') return;
+
     const activePage = Object.keys(navMap).find(function (k) {
       return k.endsWith(activeKey);
     });
@@ -185,7 +189,7 @@
 
 
   /* ----------------------------------------------------------
-     5. COPYRIGHT YEAR
+     6. COPYRIGHT YEAR
      Replaces the hard-coded year in the footer with the
      current year so it never needs a manual update.
      ---------------------------------------------------------- */
