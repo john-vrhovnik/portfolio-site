@@ -10,11 +10,12 @@
 :root {
 
   /* ----------------------------------------------------------
-     COLORS — exactly three, no exceptions
+     COLORS
      ---------------------------------------------------------- */
   --color-background: #FAFAFA;
   --color-text:       #000000;
   --color-link:       #0000FF;
+  --color-muted:      #4E4E4E;
 
   /* ----------------------------------------------------------
      TYPOGRAPHY

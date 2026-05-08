@@ -42,23 +42,32 @@
       display: flex;
       flex-direction: column;
       gap: var(--space-xs);
+      flex: 1 1 160px;
+      max-width: 240px;
     }
 
     .ds-swatch__block {
-      width: 160px;
-      height: 100px;
+      width: 100%;
+      height: 180px;
       border: 1px solid rgba(0,0,0,0.08);
+      display: flex;
+      align-items: flex-end;
+      padding: var(--space-sm);
     }
 
-    .ds-swatch__name {
+    .ds-swatch__block-name {
       font-size: var(--font-size-small);
+      font-weight: var(--font-weight-base);
       letter-spacing: var(--letter-spacing-tight);
       text-transform: uppercase;
+      line-height: 1;
     }
 
     .ds-swatch__value {
       font-size: var(--font-size-small);
       opacity: 0.5;
+      letter-spacing: var(--letter-spacing-tight);
+      text-transform: uppercase;
     }
 
     /* Type specimens */
@@ -90,13 +99,14 @@
     /* Line-height specimens */
     .ds-lh-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
       gap: var(--space-lg);
     }
 
     .ds-lh-card {
       padding: var(--space-md);
       border: 1px solid rgba(0,0,0,0.1);
+      overflow: hidden;
     }
 
     .ds-lh-label {
@@ -271,42 +281,39 @@
            COLORS
            ══════════════════════════════════════════ -->
       <section class="ds-section" aria-label="Colors">
-        <p class="ds-section__label">01 / Colors</p>
+        <p class="ds-section__label">01 /&ensp;Colors</p>
         <div class="ds-swatches">
 
           <div class="ds-swatch">
-            <div class="ds-swatch__block" style="background-color: #FAFAFA;"></div>
-            <p class="ds-swatch__name">Background</p>
+            <div class="ds-swatch__block" style="background-color: #FAFAFA; color: #000000;">
+              <span class="ds-swatch__block-name">Background</span>
+            </div>
             <p class="ds-swatch__value">--color-background</p>
             <p class="ds-swatch__value">#FAFAFA</p>
           </div>
 
           <div class="ds-swatch">
-            <div class="ds-swatch__block" style="background-color: #000000;"></div>
-            <p class="ds-swatch__name">Text</p>
+            <div class="ds-swatch__block" style="background-color: #000000; color: #FAFAFA;">
+              <span class="ds-swatch__block-name">Text</span>
+            </div>
             <p class="ds-swatch__value">--color-text</p>
             <p class="ds-swatch__value">#000000</p>
           </div>
 
           <div class="ds-swatch">
-            <div class="ds-swatch__block" style="background-color: #0000FF;"></div>
-            <p class="ds-swatch__name">Link / Brand Blue</p>
+            <div class="ds-swatch__block" style="background-color: #0000FF; color: #FAFAFA;">
+              <span class="ds-swatch__block-name">Link / Brand Blue</span>
+            </div>
             <p class="ds-swatch__value">--color-link</p>
             <p class="ds-swatch__value">#0000FF</p>
           </div>
 
           <div class="ds-swatch">
-            <div class="ds-swatch__block" style="background-color: #4e4e4e;"></div>
-            <p class="ds-swatch__name">Muted (display links)</p>
-            <p class="ds-swatch__value">Hardcoded</p>
+            <div class="ds-swatch__block" style="background-color: #4E4E4E; color: #FAFAFA;">
+              <span class="ds-swatch__block-name">Muted</span>
+            </div>
+            <p class="ds-swatch__value">--color-muted</p>
             <p class="ds-swatch__value">#4E4E4E</p>
-          </div>
-
-          <div class="ds-swatch">
-            <div class="ds-swatch__block" style="background-color: #1a1a1a;"></div>
-            <p class="ds-swatch__name">Dark tile bg</p>
-            <p class="ds-swatch__value">Hardcoded</p>
-            <p class="ds-swatch__value">#1A1A1A</p>
           </div>
 
         </div>
@@ -317,7 +324,7 @@
            TYPOGRAPHY — SIZES
            ══════════════════════════════════════════ -->
       <section class="ds-section" aria-label="Typography sizes">
-        <p class="ds-section__label">02 / Type Scale</p>
+        <p class="ds-section__label">02 /&ensp;Type Scale</p>
 
         <div class="ds-type-row">
           <p class="ds-type-meta">--font-size-display &nbsp;·&nbsp; clamp(2.75rem → 5rem) &nbsp;·&nbsp; 44px–80px</p>
@@ -366,7 +373,7 @@
            TYPOGRAPHY — WEIGHT
            ══════════════════════════════════════════ -->
       <section class="ds-section" aria-label="Font weight">
-        <p class="ds-section__label">03 / Font Weight</p>
+        <p class="ds-section__label">03 /&ensp;Font Weight</p>
 
         <div class="ds-weight-row">
           <p class="ds-type-meta">--font-weight-base &nbsp;·&nbsp; 500 &nbsp;·&nbsp; Single file (Mabry Medium) — all weights render identically</p>
@@ -380,7 +387,7 @@
            TYPOGRAPHY — LINE HEIGHTS
            ══════════════════════════════════════════ -->
       <section class="ds-section" aria-label="Line heights">
-        <p class="ds-section__label">04 / Line Heights</p>
+        <p class="ds-section__label">04 /&ensp;Line Heights</p>
         <div class="ds-lh-grid">
 
           <div class="ds-lh-card">
@@ -416,7 +423,7 @@
            TYPOGRAPHY — LETTER SPACING
            ══════════════════════════════════════════ -->
       <section class="ds-section" aria-label="Letter spacing">
-        <p class="ds-section__label">05 / Letter Spacing</p>
+        <p class="ds-section__label">05 /&ensp;Letter Spacing</p>
 
         <div class="ds-weight-row">
           <p class="ds-type-meta">--letter-spacing-tight &nbsp;·&nbsp; -0.03em</p>
@@ -435,7 +442,7 @@
            SPACING SCALE
            ══════════════════════════════════════════ -->
       <section class="ds-section" aria-label="Spacing scale">
-        <p class="ds-section__label">06 / Spacing Scale</p>
+        <p class="ds-section__label">06 /&ensp;Spacing Scale</p>
         <div class="ds-space-rows">
 
           <div class="ds-space-row">
@@ -506,7 +513,7 @@
            TRANSITIONS
            ══════════════════════════════════════════ -->
       <section class="ds-section" aria-label="Transitions">
-        <p class="ds-section__label">07 / Transitions</p>
+        <p class="ds-section__label">07 /&ensp;Transitions</p>
         <p style="font-size: var(--font-size-small); text-transform: uppercase; letter-spacing: var(--letter-spacing-tight); opacity: 0.5; margin-bottom: var(--space-lg);">Hover each box to compare speed</p>
         <div class="ds-transition-grid">
 
@@ -539,7 +546,7 @@
            GRID
            ══════════════════════════════════════════ -->
       <section class="ds-section" aria-label="Grid system">
-        <p class="ds-section__label">08 / Grid</p>
+        <p class="ds-section__label">08 /&ensp;Grid</p>
 
         <div class="ds-layout-row">
           <p class="ds-layout-token">--grid-columns</p>
@@ -604,7 +611,7 @@
            LAYOUT TOKENS
            ══════════════════════════════════════════ -->
       <section class="ds-section" aria-label="Layout tokens">
-        <p class="ds-section__label">09 / Layout</p>
+        <p class="ds-section__label">09 /&ensp;Layout</p>
 
         <div class="ds-layout-row">
           <p class="ds-layout-token">--max-width</p>
@@ -643,7 +650,7 @@
            COMPONENTS
            ══════════════════════════════════════════ -->
       <section class="ds-section" aria-label="Components">
-        <p class="ds-section__label">10 / Components</p>
+        <p class="ds-section__label">10 /&ensp;Components</p>
 
         <!-- Nav logo -->
         <div class="ds-component-row">
@@ -665,23 +672,6 @@
           <p class="section-label">About /</p>
         </div>
 
-        <!-- CS section number -->
-        <div class="ds-component-row">
-          <p class="ds-component-label">.cs-section__number</p>
-          <p class="cs-section__number">01 / Brief</p>
-        </div>
-
-        <!-- Meta item label -->
-        <div class="ds-component-row">
-          <p class="ds-component-label">.meta-item__label</p>
-          <p class="meta-item__label">Role</p>
-        </div>
-
-        <!-- Meta item value -->
-        <div class="ds-component-row">
-          <p class="ds-component-label">.meta-item__value</p>
-          <p class="meta-item__value">UX Designer — Figma, Prototyping, Site Mapping</p>
-        </div>
 
         <!-- Arrow link -->
         <div class="ds-component-row">
@@ -689,8 +679,8 @@
           <a href="#" class="arrow-link">Resume ↗</a>
           <a href="#" class="arrow-link">LinkedIn ↗</a>
           <a href="#" class="arrow-link">View Live Site ↗</a>
-          <span class="arrow-link">View Case Study →</span>
-          <span class="arrow-link">See More →</span>
+          <span class="arrow-link">View Case Study&ensp;<span class="arrow-char">→</span></span>
+          <span class="arrow-link">See More&ensp;<span class="arrow-char">→</span></span>
         </div>
 
         <!-- Text link -->
@@ -708,7 +698,7 @@
         <!-- Btn pill -->
         <div class="ds-component-row">
           <p class="ds-component-label">.btn-pill</p>
-          <a href="#" class="btn-pill">See work&ensp;→</a>
+          <a href="#" class="btn-pill">See work&ensp;<span class="arrow-char">→</span></a>
         </div>
 
         <!-- Reveal animation -->
@@ -726,7 +716,7 @@
            FONT FAMILY
            ══════════════════════════════════════════ -->
       <section class="ds-section" aria-label="Font family">
-        <p class="ds-section__label">11 / Font Family</p>
+        <p class="ds-section__label">11 /&ensp;Font Family</p>
 
         <div class="ds-layout-row">
           <p class="ds-layout-token">--font-family</p>

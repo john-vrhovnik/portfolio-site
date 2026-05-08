@@ -368,7 +368,7 @@ button {
 
 /* Muted inline link — used in hero and contact heading */
 .display-link {
-  color: #4e4e4e;
+  color: var(--color-muted);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
