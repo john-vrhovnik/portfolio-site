@@ -340,12 +340,12 @@ button {
 
 .nav-drawer.is-open {
   display: flex;
-  animation: nav-slide-down var(--transition-fast) ease forwards;
+  animation: nav-slide-down var(--transition-fast) forwards;
 }
 
 .nav-drawer.is-closing {
   display: flex;
-  animation: nav-slide-up var(--transition-fast) ease forwards;
+  animation: nav-slide-up var(--transition-fast) forwards;
 }
 
 .nav-drawer .nav-link {
