@@ -19,32 +19,43 @@
   const body       = document.body;
 
   if (navToggle && navDrawer) {
+    function closeDrawer(callback) {
+      if (!navDrawer.classList.contains('is-open')) return;
+      navToggle.classList.remove('is-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      body.style.overflow = '';
+      navDrawer.classList.remove('is-open');
+      navDrawer.classList.add('is-closing');
+      navDrawer.addEventListener('animationend', function onEnd() {
+        navDrawer.classList.remove('is-closing');
+        navDrawer.removeEventListener('animationend', onEnd);
+        if (callback) callback();
+      }, { once: true });
+    }
+
     navToggle.addEventListener('click', function () {
-      const isOpen = navToggle.classList.toggle('is-open');
-      navDrawer.classList.toggle('is-open', isOpen);
-      navToggle.setAttribute('aria-expanded', String(isOpen));
-      // Prevent body scroll when drawer is open
-      body.style.overflow = isOpen ? 'hidden' : '';
+      if (navDrawer.classList.contains('is-open')) {
+        closeDrawer();
+      } else {
+        navDrawer.classList.remove('is-closing');
+        navToggle.classList.add('is-open');
+        navToggle.setAttribute('aria-expanded', 'true');
+        navDrawer.classList.add('is-open');
+        body.style.overflow = 'hidden';
+      }
     });
 
     // Close drawer on link click
     navDrawer.querySelectorAll('.nav-link').forEach(function (link) {
       link.addEventListener('click', function () {
-        navToggle.classList.remove('is-open');
-        navDrawer.classList.remove('is-open');
-        navToggle.setAttribute('aria-expanded', 'false');
-        body.style.overflow = '';
+        closeDrawer();
       });
     });
 
     // Close drawer on Escape key
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && navDrawer.classList.contains('is-open')) {
-        navToggle.classList.remove('is-open');
-        navDrawer.classList.remove('is-open');
-        navToggle.setAttribute('aria-expanded', 'false');
-        body.style.overflow = '';
-        navToggle.focus();
+        closeDrawer(function () { navToggle.focus(); });
       }
     });
   }
