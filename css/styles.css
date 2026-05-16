@@ -688,12 +688,71 @@ button {
 /* Reusable video player — looping, muted, no controls */
 .site-video {
   width: 100%;
+  position: relative;
 }
 
 .site-video video {
   width: 100%;
   height: auto;
   display: block;
+}
+
+/* Play/pause button — bottom-left of each video */
+.video-play-btn {
+  position: absolute;
+  bottom: var(--space-sm);
+  left: var(--space-sm);
+  z-index: 10;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  /* Transparent when playing, visible when paused */
+  opacity: 0.3;
+  transition: opacity var(--transition-base);
+}
+
+.video-play-btn:hover {
+  opacity: 0.9;
+}
+
+.video-play-btn.is-paused {
+  opacity: 0.85;
+}
+
+.video-play-btn svg {
+  display: block;
+  width: 10px;
+  height: 10px;
+}
+
+/* Icon visibility toggling */
+.video-play-btn .icon-play  { display: none; }
+.video-play-btn .icon-pause { display: flex; }
+
+.video-play-btn.is-paused .icon-play  { display: flex; }
+.video-play-btn.is-paused .icon-pause { display: none; }
+
+@media (min-width: 1024px) {
+  .video-play-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    bottom: var(--space-md);
+    left: var(--space-md);
+  }
+
+  .video-play-btn svg {
+    width: 14px;
+    height: 14px;
+  }
 }
 
 

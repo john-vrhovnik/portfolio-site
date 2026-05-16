@@ -4,8 +4,10 @@
  * 1. Mobile nav toggle
  * 2. Scroll-reveal (IntersectionObserver)
  * 3. Active nav link detection
- * 4. Lazy image loading (native + polyfill fallback)
- * 5. Copyright year
+ * 4. Hide-on-scroll nav
+ * 5. Lazy image loading (native + polyfill fallback)
+ * 6. Video play/pause buttons
+ * 7. Copyright year
  */
 
 (function () {
@@ -200,7 +202,56 @@
 
 
   /* ----------------------------------------------------------
-     6. COPYRIGHT YEAR
+     6. VIDEO PLAY/PAUSE BUTTONS
+     Injects an accessible play/pause button into every
+     .site-video wrapper. Transparent when playing, opaque
+     when paused. No HTML changes required across pages.
+     ---------------------------------------------------------- */
+  (function () {
+    const SVG_PLAY = '<svg aria-hidden="true" focusable="false" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0L10 6L0 12V0Z" fill="currentColor"/></svg>';
+    const SVG_PAUSE = '<svg aria-hidden="true" focusable="false" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="3.5" height="12" fill="currentColor"/><rect x="6.5" y="0" width="3.5" height="12" fill="currentColor"/></svg>';
+
+    document.querySelectorAll('.site-video').forEach(function (wrap) {
+      var video = wrap.querySelector('video');
+      if (!video) return;
+
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'video-play-btn';
+      btn.setAttribute('aria-label', 'Pause video');
+      btn.innerHTML =
+        '<span class="icon-play" aria-hidden="true">'  + SVG_PLAY  + '</span>' +
+        '<span class="icon-pause" aria-hidden="true">' + SVG_PAUSE + '</span>';
+
+      wrap.appendChild(btn);
+
+      function updateState() {
+        if (video.paused) {
+          btn.classList.add('is-paused');
+          btn.setAttribute('aria-label', 'Play video');
+        } else {
+          btn.classList.remove('is-paused');
+          btn.setAttribute('aria-label', 'Pause video');
+        }
+      }
+
+      btn.addEventListener('click', function () {
+        video.paused ? video.play() : video.pause();
+      });
+
+      video.addEventListener('play',    updateState);
+      video.addEventListener('playing', updateState);
+      video.addEventListener('pause',   updateState);
+
+      // Sync after autoplay resolves
+      updateState();
+      video.addEventListener('loadeddata', updateState);
+    });
+  })();
+
+
+  /* ----------------------------------------------------------
+     8. COPYRIGHT YEAR
      Replaces the hard-coded year in the footer with the
      current year so it never needs a manual update.
      ---------------------------------------------------------- */
