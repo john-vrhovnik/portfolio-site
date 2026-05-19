@@ -208,6 +208,8 @@
      when paused. No HTML changes required across pages.
      ---------------------------------------------------------- */
   (function () {
+    if (window.location.pathname.includes('progressive-digital')) return;
+
     const SVG_PLAY = '<svg aria-hidden="true" focusable="false" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0L10 6L0 12V0Z" fill="currentColor"/></svg>';
     const SVG_PAUSE = '<svg aria-hidden="true" focusable="false" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="3.5" height="12" fill="currentColor"/><rect x="6.5" y="0" width="3.5" height="12" fill="currentColor"/></svg>';
 
