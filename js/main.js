@@ -259,7 +259,11 @@
      ---------------------------------------------------------- */
   const copyEl = document.querySelector('.site-footer__copy');
   if (copyEl) {
-    copyEl.textContent = copyEl.textContent.replace(/\d{4}/, new Date().getFullYear());
+    copyEl.childNodes.forEach(function (node) {
+      if (node.nodeType === 3) {
+        node.textContent = node.textContent.replace(/\d{4}/, new Date().getFullYear());
+      }
+    });
   }
 
 })();
