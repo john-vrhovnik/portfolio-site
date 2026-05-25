@@ -7,9 +7,8 @@
   <meta name="robots" content="noindex, nofollow" />
 
   <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="../images/favicons/favicon.svg">
   <link rel="icon" href="../favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicons/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="../images/favicons/apple-touch-icon.png">
   <link rel="manifest" href="../site.webmanifest">
   <link rel="stylesheet" href="../css/styles.css" />
@@ -271,9 +270,10 @@
     <div class="ds-page container">
 
       <!-- Page header -->
-      <div style="padding-block: var(--space-3xl) var(--space-5xl);">
-        <p style="font-size: var(--font-size-small); text-transform: uppercase; letter-spacing: var(--letter-spacing-tight); opacity: 0.5; margin-bottom: var(--space-sm);">Johnvrhovnik.com – Tokens and styles</p>
-        <h1 style="font-size: var(--font-size-h1); font-weight: var(--font-weight-base); letter-spacing: var(--letter-spacing-tight); line-height: var(--line-height-tight); text-transform: uppercase;">Design System</h1>
+      <div style="padding-block: var(--space-3xl) var(--space-5xl); padding-bottom: calc(var(--space-5xl) * 1.5);">
+        <p style="font-size: var(--font-size-h3); font-weight: var(--font-weight-base); letter-spacing: var(--letter-spacing-tight); line-height: var(--line-height-snug); text-transform: uppercase; margin-bottom: var(--space-sm);">Welcome to my</p>
+        <h1 style="font-size: var(--font-size-display); font-weight: var(--font-weight-base); letter-spacing: var(--letter-spacing-tight); line-height: var(--line-height-display); text-transform: uppercase;">Design System</h1>
+        <p style="font-size: var(--font-size-body); line-height: var(--line-height-normal); margin-top: var(--space-md);">This site was built entirely with Claude Code</p>
       </div>
 
 
@@ -683,6 +683,12 @@
           <span class="arrow-link">See More&ensp;<span class="arrow-char">→</span></span>
         </div>
 
+        <!-- SVG link -->
+        <div class="ds-component-row">
+          <p class="ds-component-label">.svg-link</p>
+          <a href="#" class="svg-link"><img src="../images/smile.svg" alt="Smile"></a>
+        </div>
+
         <!-- Text link -->
         <div class="ds-component-row">
           <p class="ds-component-label">.text-link</p>
@@ -740,7 +746,7 @@
 
   <footer class="site-footer container">
     <div class="site-footer__inner">
-      <span class="site-footer__copy"><span class="copy-symbol">©</span> 2026 John Vrhovnik</span>
+      <span class="site-footer__copy"><a href="design-system.html" class="svg-link"><img src="../images/smile.svg" alt=""></a> 2026 John Vrhovnik</span>
       <a href="mailto:johnvrhovnik@gmail.com" class="arrow-link">johnvrhovnik@gmail.com ↗</a>
     </div>
   </footer>

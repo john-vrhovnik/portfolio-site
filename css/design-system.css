@@ -100,3 +100,28 @@
    Mobile:  < 768px    → 390px screenshot
    Desktop: ≥ 1024px   → 1710px screenshot
    ============================================================ */
+
+
+/* ============================================================
+   COMPONENTS
+   ============================================================ */
+
+.svg-link {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: baseline;
+  text-decoration: none;
+  color: inherit;
+}
+
+.svg-link img {
+  display: block;
+  height: 1cap;
+  width: auto;
+  filter: brightness(0);
+  transition: filter var(--transition-fast);
+}
+
+.svg-link:hover img {
+  filter: brightness(1);
+}
