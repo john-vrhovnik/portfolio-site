@@ -226,6 +226,24 @@
       opacity: 0.5;
     }
 
+    @media (max-width: 600px) {
+      .ds-layout-row {
+        flex-direction: column;
+        gap: var(--space-2xs);
+      }
+      .ds-layout-token {
+        min-width: 0;
+      }
+      .ds-component-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-sm);
+      }
+      .ds-component-label {
+        min-width: 0;
+      }
+    }
+
     /* Reveal demo */
     .ds-reveal-demo {
       width: 100%;
@@ -234,6 +252,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: var(--space-md);
       font-size: var(--font-size-small);
       text-transform: uppercase;
       letter-spacing: var(--letter-spacing-tight);
@@ -565,18 +584,18 @@
 
         <p style="font-size: var(--font-size-small); text-transform: uppercase; letter-spacing: var(--letter-spacing-tight); opacity: 0.5; margin-bottom: var(--space-md);">12-column grid — .grid + .col-{n}</p>
         <div class="grid" style="margin-bottom: var(--space-xl);">
-          <div class="col-1"  style="background:#e8e8e8; padding: var(--space-xs); font-size: var(--font-size-small); text-align:center;">1</div>
-          <div class="col-1"  style="background:#e8e8e8; padding: var(--space-xs); font-size: var(--font-size-small); text-align:center;">2</div>
-          <div class="col-1"  style="background:#e8e8e8; padding: var(--space-xs); font-size: var(--font-size-small); text-align:center;">3</div>
-          <div class="col-1"  style="background:#e8e8e8; padding: var(--space-xs); font-size: var(--font-size-small); text-align:center;">4</div>
-          <div class="col-1"  style="background:#e8e8e8; padding: var(--space-xs); font-size: var(--font-size-small); text-align:center;">5</div>
-          <div class="col-1"  style="background:#e8e8e8; padding: var(--space-xs); font-size: var(--font-size-small); text-align:center;">6</div>
-          <div class="col-1"  style="background:#e8e8e8; padding: var(--space-xs); font-size: var(--font-size-small); text-align:center;">7</div>
-          <div class="col-1"  style="background:#e8e8e8; padding: var(--space-xs); font-size: var(--font-size-small); text-align:center;">8</div>
-          <div class="col-1"  style="background:#e8e8e8; padding: var(--space-xs); font-size: var(--font-size-small); text-align:center;">9</div>
-          <div class="col-1"  style="background:#e8e8e8; padding: var(--space-xs); font-size: var(--font-size-small); text-align:center;">10</div>
-          <div class="col-1"  style="background:#e8e8e8; padding: var(--space-xs); font-size: var(--font-size-small); text-align:center;">11</div>
-          <div class="col-1"  style="background:#e8e8e8; padding: var(--space-xs); font-size: var(--font-size-small); text-align:center;">12</div>
+          <div class="col-1"  style="background:#e8e8e8; padding-block: var(--space-xs); font-size: var(--font-size-small); text-align:center; min-width:0;">1</div>
+          <div class="col-1"  style="background:#e8e8e8; padding-block: var(--space-xs); font-size: var(--font-size-small); text-align:center; min-width:0;">2</div>
+          <div class="col-1"  style="background:#e8e8e8; padding-block: var(--space-xs); font-size: var(--font-size-small); text-align:center; min-width:0;">3</div>
+          <div class="col-1"  style="background:#e8e8e8; padding-block: var(--space-xs); font-size: var(--font-size-small); text-align:center; min-width:0;">4</div>
+          <div class="col-1"  style="background:#e8e8e8; padding-block: var(--space-xs); font-size: var(--font-size-small); text-align:center; min-width:0;">5</div>
+          <div class="col-1"  style="background:#e8e8e8; padding-block: var(--space-xs); font-size: var(--font-size-small); text-align:center; min-width:0;">6</div>
+          <div class="col-1"  style="background:#e8e8e8; padding-block: var(--space-xs); font-size: var(--font-size-small); text-align:center; min-width:0;">7</div>
+          <div class="col-1"  style="background:#e8e8e8; padding-block: var(--space-xs); font-size: var(--font-size-small); text-align:center; min-width:0;">8</div>
+          <div class="col-1"  style="background:#e8e8e8; padding-block: var(--space-xs); font-size: var(--font-size-small); text-align:center; min-width:0;">9</div>
+          <div class="col-1"  style="background:#e8e8e8; padding-block: var(--space-xs); font-size: var(--font-size-small); text-align:center; min-width:0;">10</div>
+          <div class="col-1"  style="background:#e8e8e8; padding-block: var(--space-xs); font-size: var(--font-size-small); text-align:center; min-width:0;">11</div>
+          <div class="col-1"  style="background:#e8e8e8; padding-block: var(--space-xs); font-size: var(--font-size-small); text-align:center; min-width:0;">12</div>
         </div>
 
         <p style="font-size: var(--font-size-small); text-transform: uppercase; letter-spacing: var(--letter-spacing-tight); opacity: 0.5; margin-bottom: var(--space-md);">Common span examples</p>
